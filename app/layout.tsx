@@ -1,11 +1,30 @@
 import { Footer } from "@/components/footer";
 import { Navbar } from "@/components/navbar";
-import { SEO } from "@/components/seo";
+import { SEO } from "@/components/SEO";
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "./globals.css";
+import localFont from 'next/font/local';
 
-const inter = Inter({ subsets: ["latin"] });
+const Aeonik = localFont({ 
+  src: [
+    {
+      path: "fonts/Aeonik_Regular.ttf",
+      weight: "400",
+    },
+    {
+      path: "fonts/Aeonik_Light.ttf",
+      weight: "300",
+    },
+    {
+      path: "fonts/Aeonik_Black.ttf",
+      weight: "900",
+    },
+    {
+      path: "fonts/Aeonik_Bold.ttf",
+      weight: "700",
+    },
+  ]
+})
 
 const title = "Jeremy Quinto | Software Developer";
 const description = "A full stack software developer based in the Bay Area, California.";
@@ -49,8 +68,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <SEO title={title} description={description} />
-      <body className={inter.className}>
-        <div className="flex flex-col min-h-[100dvh]">
+      <body className={Aeonik.className}>
+        <div className="flex flex-col min-h-[100dvh] max-w-[100dvw] overflow-x-hidden relative">
           <Navbar />
           {children}
           <Footer />

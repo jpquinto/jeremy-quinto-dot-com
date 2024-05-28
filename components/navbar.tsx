@@ -2,24 +2,26 @@ import Link from "next/link"
 
 export const Navbar = () => {
     return (
-        <header className="px-4 lg:px-6 h-14 flex items-center shadow-sm">
+        <header className="px-5 lg:px-8 h-14 flex items-center top-0 fixed w-[100dvw]">
             <Link className="flex items-center justify-center" href="#">
+              <div className="rounded-full p-[0.5rem] px-[0.6rem] bg-white shadow-2xl border-[1px] border-slate-500 flex justify-center">
                 <CodeIcon className="h-6 w-6" />
+              </div>
                 <span className="sr-only">Jeremy Quinto</span>
             </Link>
-            <nav className="ml-auto flex gap-4 sm:gap-6">
-            <Link className="text-sm font-medium hover:underline underline-offset-4" href="#">
-                Skills
-            </Link>
-            <Link className="text-sm font-medium hover:underline underline-offset-4" href="#">
-                Projects
-            </Link>
-            <Link className="text-sm font-medium hover:underline underline-offset-4" href="#">
-                Blog
-            </Link>
-            <Link className="text-sm font-medium hover:underline underline-offset-4" href="#">
-                Contact
-            </Link>
+            <nav className="ml-auto mr-5 flex gap-4 sm:gap-6">
+              <Link className="text-sm font-medium hover:underline underline-offset-4" href="#">
+                  Skills
+              </Link>
+              <Link className="text-sm font-medium hover:underline underline-offset-4" href="#">
+                  Projects
+              </Link>
+              <Link className="text-sm font-medium hover:underline underline-offset-4" href="#">
+                  Blog
+              </Link>
+              <Link className="text-sm font-medium hover:underline underline-offset-4" href="#">
+                  Contact
+              </Link>
             </nav>
         </header>
     )
