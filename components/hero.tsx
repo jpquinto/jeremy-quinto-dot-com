@@ -24,31 +24,31 @@ export const Hero = () => {
             <div className="max-w-[1300px] mx-auto gap-4 px-4 sm:px-6 md:gap-16">
               <div className="col-span-2">
                 {/* <div className="p-2 bg-gradient-to-r from-cyan-200 to-pink-200 rounded-2xl shadow-lg"> */}
-                <div className={cn("mx-auto w-[80%] transition-all duration-1000 p-2 bg-gradient-to-r from-emerald-500 to-lime-500 rounded-full shadow-lg",
-                    animationStart && "w-full"
+                <div className={cn("mx-auto w-[60%] transition-all duration-1000 p-2 bg-gradient-to-r from-emerald-400 to-lime-400 rounded-full shadow-lg",
+                    animationStart && "w-[90%]"
                 )}>
-                    <div className="p-3 bg-gradient-to-r from-emerald-300 to-lime-300 delay-500 rounded-full shadow-lg">
-                        <div className="p-4 bg-gradient-to-r from-emerald-200 to-lime-200 bg-opacity-0 rounded-full shadow-lg">
-                            <h1 className="text-center tracking-wider text-6xl sm:text-4xl md:text-7xl bg-white rounded-full p-5 shadow-2xl">
-                            Jeremy Quinto
+                    <div className="p-2 bg-gradient-to-r from-emerald-300 to-lime-300 delay-500 rounded-full shadow-lg">
+                        <div className="p-2 bg-gradient-to-r from-emerald-200 to-lime-200 bg-opacity-0 rounded-full shadow-lg">
+                            <h1 className="text-center tracking-widest text-6xl sm:text-4xl md:text-7xl bg-gradient-to-r from-emerald-100 from-10% via-white via-50% to-lime-100 to-90% rounded-full p-5 shadow-2xl font-light">
+                            jeremy quinto
                             </h1>
                         </div>
                     </div>
                 </div>
-                <p className="mx-auto max-w-[700px] text-gray-500 md:text-xl dark:text-gray-400 mt-4 text-center">
-                  Experienced software developer with a passion for building innovative and user-friendly applications.
+                <p className="mx-auto max-w-[700px] text-gray-500 md:text-xl dark:text-gray-400 mt-10 text-center">
+                  experienced software developer with a passion for building innovative and user-friendly applications.
                 </p>
                 <div className="mt-4 flex justify-center items-start space-x-4 text-gray-500">
                     <div className="inline-block rounded-lg bg-white shadow-2xl border-2 border-green-400 px-3 py-1 text-lg">
-                        Software Developer
+                        software developer
                     </div>
                     <Component className="h-4 w-4 my-auto" />
                     <div className="inline-block rounded-lg bg-white shadow-2xl border-2 border-green-300 px-3 py-1 text-lg">
-                        Full-Stack
+                        full-stack
                     </div>
                     <Component className="h-4 w-4 my-auto" />
                     <div className="inline-block rounded-lg bg-white shadow-2xl border-2 border-lime-400 px-3 py-1 text-lg">
-                        Bay Area
+                        bay area
                     </div>
                 </div>
               </div>

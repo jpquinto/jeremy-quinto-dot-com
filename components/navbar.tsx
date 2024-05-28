@@ -10,17 +10,20 @@ export const Navbar = () => {
                 <span className="sr-only">Jeremy Quinto</span>
             </Link>
             <nav className="ml-auto mr-5 flex gap-4 sm:gap-6">
-              <Link className="text-sm font-medium hover:underline underline-offset-4" href="#">
-                  Skills
+              <Link className="text-sm font-medium hover:underline underline-offset-4" href="#skills">
+                  skills
               </Link>
-              <Link className="text-sm font-medium hover:underline underline-offset-4" href="#">
-                  Projects
+              <Link className="text-sm font-medium hover:underline underline-offset-4" href="#projects">
+                  projects
               </Link>
-              <Link className="text-sm font-medium hover:underline underline-offset-4" href="#">
-                  Blog
+              <Link className="text-sm font-medium hover:underline underline-offset-4" href="#bio">
+                  bio
               </Link>
-              <Link className="text-sm font-medium hover:underline underline-offset-4" href="#">
-                  Contact
+              <Link className="text-sm font-medium hover:underline underline-offset-4" href="#blog">
+                  blog
+              </Link>
+              <Link className="text-sm font-medium hover:underline underline-offset-4" href="#contact">
+                  contact
               </Link>
             </nav>
         </header>
