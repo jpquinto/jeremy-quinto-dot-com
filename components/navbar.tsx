@@ -24,7 +24,7 @@ export const Navbar = () => {
     }, []);
 
     return (
-        <header className={cn("px-5 lg:px-8 h-14 flex items-center top-0 fixed w-[100dvw] transition-colors duration-500",
+        <header className={cn("px-5 lg:px-8 h-14 flex items-center top-0 fixed w-[100dvw] transition-colors duration-500 z-[999]",
           scrolled && 'bg-white'
         )}>
             <Link className="flex items-center justify-center" href="#">

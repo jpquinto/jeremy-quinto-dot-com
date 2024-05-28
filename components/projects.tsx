@@ -1,9 +1,55 @@
+import { Component } from "lucide-react"
 import Link from "next/link"
+import { ProductParallax } from "./project-background"
 
 export const Projects = () => {
+
+    const projects = [
+      {
+        title: "NoHire",
+        link: "",
+        thumbnail: "/img/projects/1/1.png"
+      },
+      {
+        title: "NoHire",
+        link: "",
+        thumbnail: "/img/projects/1/2.png"
+      },
+      {
+        title: "NoHire",
+        link: "",
+        thumbnail: "/img/projects/1/3.png"
+      },
+      {
+        title: "NoHire",
+        link: "",
+        thumbnail: "/img/projects/1/4.png"
+      },
+      {
+        title: "NoHire",
+        link: "",
+        thumbnail: "/img/projects/1/5.png"
+      },
+      {
+        title: "NoHire",
+        link: "",
+        thumbnail: "/img/projects/1/6.png"
+      },
+      {
+        title: "NoHire",
+        link: "",
+        thumbnail: "/img/projects/1/7.png"
+      },
+      {
+        title: "NoHire",
+        link: "",
+        thumbnail: "/img/projects/1/8.png"
+      },
+    ]
+
     return (
-        <section className="w-full py-12 md:py-24 lg:py-32 bg-gray-100 dark:bg-gray-800 shadow-lg" id="projects">
-          <div className="container space-y-12 px-4 md:px-6">
+        <section className="w-full bg-gray-100 shadow-lg relative" id="projects">
+          <div className="container space-y-12 px-4 md:px-6 translate-y-[10rem]">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
                 <div className="inline-block text-purple-700 rounded-lg bg-white shadow-2xl px-3 py-1">#projects</div>
@@ -13,66 +59,27 @@ export const Projects = () => {
                 </p>
               </div>
             </div>
-            <div className="mx-auto grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-              <div className="rounded-lg overflow-hidden shadow-lg">
-                <div className="p-4 bg-white dark:bg-gray-950">
-                  <h3 className="text-lg font-bold">NoHire</h3>
-                  <p className="text-gray-500 dark:text-gray-400 mt-2">
-                    A web application built with React and Node.js.
-                  </p>
-                  <div className="mt-4">
-                    <Link
-                      className="inline-flex h-8 items-center justify-center rounded-md bg-gray-900 px-4 text-sm font-medium text-gray-50 shadow transition-colors hover:bg-gray-900/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-950 disabled:pointer-events-none disabled:opacity-50 dark:bg-gray-50 dark:text-gray-900 dark:hover:bg-gray-50/90 dark:focus-visible:ring-gray-300"
-                      href="#"
-                    >
-                      View Project
-                    </Link>
-                  </div>
+            <div className="mt-4 flex justify-center items-start space-x-4 text-gray-500">
+                <div className="inline-block rounded-lg bg-white shadow-2xl border-2 border-green-400 px-3 py-1 text-lg">
+                    NoHire
                 </div>
-              </div>
-              <div className="rounded-lg overflow-hidden shadow-lg">
-                <div className="p-4 bg-white dark:bg-gray-950">
-                  <h3 className="text-lg font-bold">The Carbon Crucible + CMS</h3>
-                  <p className="text-gray-500 dark:text-gray-400 mt-2">A mobile app built with React Native.</p>
-                  <div className="mt-4">
-                    <Link
-                      className="inline-flex h-8 items-center justify-center rounded-md bg-gray-900 px-4 text-sm font-medium text-gray-50 shadow transition-colors hover:bg-gray-900/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-950 disabled:pointer-events-none disabled:opacity-50 dark:bg-gray-50 dark:text-gray-900 dark:hover:bg-gray-50/90 dark:focus-visible:ring-gray-300"
-                      href="#"
-                    >
-                      View Project
-                    </Link>
-                  </div>
+                <Component className="h-4 w-4 my-auto" />
+                <div className="inline-block rounded-lg bg-white shadow-2xl border-2 border-green-300 px-3 py-1 text-lg">
+                    The Carbon Crucible
                 </div>
-              </div>
-              <div className="rounded-lg overflow-hidden shadow-lg">
-                {/* <img
-                  alt="Project 3"
-                  className="w-full h-48 object-cover"
-                  height="200"
-                  src="/placeholder.svg"
-                  style={{
-                    aspectRatio: "300/200",
-                    objectFit: "cover",
-                  }}
-                  width="300"
-                /> */}
-                <div className="p-4 bg-white dark:bg-gray-950">
-                  <h3 className="text-lg font-bold">Project 3</h3>
-                  <p className="text-gray-500 dark:text-gray-400 mt-2">
-                    A full-stack web application built with Next.js and Express.
-                  </p>
-                  <div className="mt-4">
-                    <Link
-                      className="inline-flex h-8 items-center justify-center rounded-md bg-gray-900 px-4 text-sm font-medium text-gray-50 shadow transition-colors hover:bg-gray-900/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-950 disabled:pointer-events-none disabled:opacity-50 dark:bg-gray-50 dark:text-gray-900 dark:hover:bg-gray-50/90 dark:focus-visible:ring-gray-300"
-                      href="#"
-                    >
-                      View Project
-                    </Link>
-                  </div>
+                <Component className="h-4 w-4 my-auto" />
+                <div className="inline-block rounded-lg bg-white shadow-2xl border-2 border-lime-400 px-3 py-1 text-lg">
+                    Ecommerce CMS
                 </div>
-              </div>
+                <Component className="h-4 w-4 my-auto" />
+                <div className="inline-block rounded-lg bg-white shadow-2xl border-2 border-lime-400 px-3 py-1 text-lg">
+                    Portfolio (deprecated)
+                </div>
             </div>
           </div>
+          <ProductParallax 
+            products={projects}
+          />
         </section>
     )
 }
