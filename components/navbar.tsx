@@ -1,8 +1,32 @@
+'use client';
+
 import Link from "next/link"
+import { useEffect, useState } from "react";
+import { cn } from '@/lib/utils'
 
 export const Navbar = () => {
+
+    const [scrolled, setScrolled] = useState(false);
+
+    useEffect(() => {
+      const handleScroll = () => {
+        if (window.scrollY > 0) {
+          setScrolled(true);
+        } else {
+          setScrolled(false);
+        }
+      }
+
+      window.addEventListener('scroll', handleScroll);
+      return () => {
+        window.removeEventListener('scroll', handleScroll);
+      };
+    }, []);
+
     return (
-        <header className="px-5 lg:px-8 h-14 flex items-center top-0 fixed w-[100dvw]">
+        <header className={cn("px-5 lg:px-8 h-14 flex items-center top-0 fixed w-[100dvw] transition-colors duration-500",
+          scrolled && 'bg-white'
+        )}>
             <Link className="flex items-center justify-center" href="#">
               <div className="rounded-full p-[0.5rem] px-[0.6rem] bg-white shadow-2xl border-[1px] border-slate-500 flex justify-center">
                 <CodeIcon className="h-6 w-6" />

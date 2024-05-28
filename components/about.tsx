@@ -15,39 +15,27 @@ export const About = () => {
             </div>
             <div className="mx-auto grid items-start gap-8 sm:max-w-4xl sm:grid-cols-2 md:gap-12 lg:max-w-5xl lg:grid-cols-3">
               <div className="grid gap-1">
-                <h3 className="text-xl font-bold tracking-tight">frontend</h3>
+                <h3 className="text-xl font-bold tracking-tight">🎓 education</h3>
                 <p className="text-sm text-gray-500 dark:text-gray-400">
-                  proficient in React, Next.js, Tailwind, and more for building responsive and interactive user interfaces
+                  i graduated from UC San Diego in summer 2023 with a B.S. in Mathematics - Computer Science and a minor in Data Science
                 </p>
               </div>
               <div className="grid gap-1">
-                <h3 className="text-xl font-bold tracking-tight">backend</h3>
+                <h3 className="text-xl font-bold tracking-tight">🌉 bay area</h3>
                 <p className="text-sm text-gray-500 dark:text-gray-400">
-                  experienced in Node.js for building scalable and secure server-side applications
+                  i was born and raised in the san francisco bay area, where i am currently based
                 </p>
               </div>
               <div className="grid gap-1">
-                <h3 className="text-xl font-bold tracking-tight">database management</h3>
+                <h3 className="text-xl font-bold tracking-tight">👩🏻‍🎓 tutoring</h3>
                 <p className="text-sm text-gray-500 dark:text-gray-400">
-                  knowledgeable in SQL and NoSQL databases, including MySQL, PostgreSQL, and MongoDB
+                  for the last year, i have worked part time as a tutor, working with 15+ different students from K-12 in various math and computer science topics
                 </p>
               </div>
               <div className="grid gap-1">
-                <h3 className="text-xl font-bold tracking-tight">cloud</h3>
+                <h3 className="text-xl font-bold tracking-tight">🏀 hobbies</h3>
                 <p className="text-sm text-gray-500 dark:text-gray-400">
-                  familiar with cloud platforms like AWS and Google Cloud
-                </p>
-              </div>
-              <div className="grid gap-1">
-                <h3 className="text-xl font-bold tracking-tight">security</h3>
-                <p className="text-sm text-gray-500 dark:text-gray-400">
-                  capable of implementing authentication mechanisms in OAuth 2.0 and JWT
-                </p>
-              </div>
-              <div className="grid gap-1">
-                <h3 className="text-xl font-bold tracking-tight">seo</h3>
-                <p className="text-sm text-gray-500 dark:text-gray-400">
-                  knowledgeable in optimizing websites for search engines
+                  i love basketball, my favorite team is the Golden State Warriors! i also dabble in music production for fun
                 </p>
               </div>
             </div>
