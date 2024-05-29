@@ -4,6 +4,7 @@ import { SEO } from "@/components/SEO";
 import type { Metadata } from "next";
 import "./globals.css";
 import localFont from 'next/font/local';
+import { Socials } from "@/components/socials";
 
 const Aeonik = localFont({ 
   src: [
@@ -72,7 +73,7 @@ export default function RootLayout({
         <div className="flex flex-col min-h-[100dvh] max-w-[100dvw] overflow-x-hidden relative">
           <Navbar />
           {children}
-          <Footer />
+          {/* <Footer /> */}
         </div>
       </body>
     </html>

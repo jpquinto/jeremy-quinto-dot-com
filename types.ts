@@ -33,3 +33,14 @@ export interface BlogPost {
     publishedAt: string;
     updatedAt: string;
 }
+
+export interface Project {
+    title: string;
+    tagline: string;
+    description: string;
+    githubUrl?: string;
+    websiteUrl?: string;
+    images: {
+        url: string;
+    }[];
+}

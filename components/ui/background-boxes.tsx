@@ -56,7 +56,7 @@ export const BoxesCore = ({ className, ...rest }: { className?: string }) => {
                   `var(--white)`,
                 ],
                 transition: {
-                  duration: 3, // Increase duration to make flicker slower
+                  duration: 2, // Increase duration to make flicker slower
                   repeat: Infinity,
                   repeatType: "mirror",
                   delay: getRandomDelay(),

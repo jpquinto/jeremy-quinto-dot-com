@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import {
   motion,
   useScroll,
@@ -9,52 +9,71 @@ import {
 } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
+import { Project } from "@/types";
 
-export const ProductParallax = ({
-  products,
+export const ProjectParallax = ({
+  project,
 }: {
-  products: {
-    title: string;
-    link: string;
-    thumbnail: string;
-  }[];
+  project: Project;
 }) => {
-  const firstRow = products.slice(0, 5);
-  const secondRow = products.slice(5, 10);
+  const firstRow = project.images.slice(0, 5);
+  const secondRow = project.images.slice(5, 10);
+
+  const [translateX, setTranslateX] = useState(0);
+
+  useEffect(() => {
+    let startTime = Date.now();
+    let animationFrameId: number;
+
+    const animate = () => {
+      const elapsedTime = Date.now() - startTime;
+      const sineValue = Math.sin(elapsedTime * 0.001); // Adjust the frequency by modifying the multiplier
+      const newTranslateX = sineValue * 10; // Adjust amplitude by changing 50
+      setTranslateX(newTranslateX);
+
+      animationFrameId = requestAnimationFrame(animate);
+    };
+    animate();
+
+    return () => cancelAnimationFrame(animationFrameId);
+  }, []);
 
   const staticRotateX = 30;
   const staticOpacity = 0.7;
   const staticRotateY = -10;
   const staticRotateZ = 20;
-  const staticTranslateY = -400;
+  const staticTranslateY = 20;
   return (
     <div
-      className="h-[100dvh] pt-40 overflow-hidden antialiased relative flex flex-col self-auto [perspective:2000px] [transform-style:preserve-3d]"
+      className="h-[70dvh] pt-40 overflow-hidden antialiased relative flex flex-col self-auto [perspective:2000px] [transform-style:preserve-3d] z-10"
     >
-      <Header />
+      <div className="absolute -top-1/4 right-0 p-20">
+        <Header project={project} />
+      </div>
       <motion.div
         style={{
             rotateX: staticRotateX,
             rotateY: staticRotateY,
             rotateZ: staticRotateZ,
+            translateX: translateX,
             translateY: staticTranslateY,
             opacity: staticOpacity,
         }}
-        className="-z-20"
+        className="-z-20 pointer-events-none"
       >
         <motion.div className="flex flex-row-reverse space-x-reverse space-x-20 mb-20">
-          {firstRow.map((product) => (
-            <ProductCard
-              product={product}
-              key={product.title}
+          {firstRow.map((image, index) => (
+            <ImageCard
+              url={image.url}
+              key={image.url + index}
             />
           ))}
         </motion.div>
-        <motion.div className="flex flex-row  mb-20 space-x-20 ">
-          {secondRow.map((product) => (
-            <ProductCard
-              product={product}
-              key={product.title}
+        <motion.div className="flex flex-row space-x-20">
+          {secondRow.map((image, index) => (
+            <ImageCard
+              url={image.url}
+              key={image.url + index}
             />
           ))}
         </motion.div>
@@ -63,69 +82,68 @@ export const ProductParallax = ({
   );
 };
 
-export const Header = () => {
+export const Header = ({
+  project,
+}: {
+  project: Project;
+}) => {
   return (
-    <div className="max-w-7xl relative mx-auto py-20 md:py-40 px-4 w-full left-0 top-0">
-      <h1 className="text-4xl md:text-7xl font-bold dark:text-white">
-        NoHire
+    <div className="max-w-7xl relative ml-auto py-20 md:py-40 px-4 w-full text-right">
+      <h1 className="bg-gradient-to-b from-black/40 to-black/80 bg-clip-text leading-loose text-transparent drop-shadow-2xl text-3xl md:text-5xl font-bold dark:text-white pb-3">
+        {project.title}
       </h1>
-      <p className="max-w-2xl text-base md:text-xl mt-8 mb-5 font-semibold">
-        the all-in-one tool for keeping track of your job application process
+      <p className="text-base md:text-xl mt-2 mb-2 font-semibold text-right">
+        {project.tagline}
       </p>
-      <p className="max-w-2xl text-base md:text-xl mt-8 mb-5">
-        created using Next.js and Convex
+      <p className="text-base md:text-xl mb-5">
+        {project.description}
       </p>
-      <div className="space-x-4">
-        <Link
-          href={'/'}
-          className="bg-gray-800 text-white rounded-lg p-2"
-          >
-          github
-        </Link>
-        <Link
-          href={'/'}
-          className="bg-gray-800 text-white rounded-lg p-2"
-          >
-          website
-        </Link>
+      <div className="space-x-4 h-0 overflow-visible">
+        {project.githubUrl && (
+          <Link
+            href={project.githubUrl}
+            className="bg-gray-800 text-white rounded-lg p-2"
+            >
+            github
+          </Link>
+        )}
+        {project.websiteUrl && (
+          <Link
+            href={project.websiteUrl}
+            className="bg-gray-800 text-white rounded-lg p-2"
+            >
+            website
+          </Link>
+        )}
       </div>
     </div>
   );
 };
 
-export const ProductCard = ({
-  product,
+export const ImageCard = ({
+  url,
 }: {
-  product: {
-    title: string;
-    link: string;
-    thumbnail: string;
-  };
+  url: string;
 }) => {
   return (
     <motion.div
       whileHover={{
         y: -20,
       }}
-      key={product.title}
-      className="group/product h-96 w-[25rem] h-[15rem] relative flex-shrink-0"
+      key={url}
+      className="group/project w-[25rem] h-[12rem] relative flex-shrink-0"
     >
-      <Link
-        href={product.link}
-        className="block group-hover/product:shadow-2xl "
+      <div
+        className="block group-hover/project:shadow-2xl"
       >
         <Image
-          src={product.thumbnail}
+          src={url}
           height="600"
           width="600"
           className="object-cover object-left-top absolute h-full w-full inset-0"
-          alt={product.title}
+          alt={'project image'}
         />
-      </Link>
-      <div className="absolute inset-0 h-full w-full opacity-0 group-hover/product:opacity-80 bg-black pointer-events-none"></div>
-      <h2 className="absolute bottom-4 left-4 opacity-0 group-hover/product:opacity-100 text-white">
-        {product.title}
-      </h2>
+      </div>
     </motion.div>
   );
 };

@@ -3,7 +3,7 @@ import axios from "axios";
 const query = `
     query Publication {
         publication(host: "blog.jeremyquinto.com") {
-            posts(first: 10) {
+            posts(first: 3) {
                 edges {
                     node {
                         title
