@@ -21,22 +21,22 @@ export const ProjectParallax = ({
 
   const [translateX, setTranslateX] = useState(0);
 
-  useEffect(() => {
-    let startTime = Date.now();
-    let animationFrameId: number;
+  // useEffect(() => {
+  //   let startTime = Date.now();
+  //   let animationFrameId: number;
 
-    const animate = () => {
-      const elapsedTime = Date.now() - startTime;
-      const sineValue = Math.sin(elapsedTime * 0.001); // Adjust the frequency by modifying the multiplier
-      const newTranslateX = sineValue * 10; // Adjust amplitude by changing 50
-      setTranslateX(newTranslateX);
+  //   const animate = () => {
+  //     const elapsedTime = Date.now() - startTime;
+  //     const sineValue = Math.sin(elapsedTime * 0.001); // Adjust the frequency by modifying the multiplier
+  //     const newTranslateX = sineValue * 10; // Adjust amplitude by changing 50
+  //     setTranslateX(newTranslateX);
 
-      animationFrameId = requestAnimationFrame(animate);
-    };
-    animate();
+  //     animationFrameId = requestAnimationFrame(animate);
+  //   };
+  //   animate();
 
-    return () => cancelAnimationFrame(animationFrameId);
-  }, []);
+  //   return () => cancelAnimationFrame(animationFrameId);
+  // }, []);
 
   const staticRotateX = 30;
   const staticOpacity = 0.7;
@@ -47,7 +47,7 @@ export const ProjectParallax = ({
     <div
       className="h-[70dvh] pt-40 overflow-hidden antialiased relative flex flex-col self-auto [perspective:2000px] [transform-style:preserve-3d] z-10"
     >
-      <div className="absolute -top-1/4 right-0 p-20">
+      <div className="absolute -top-1/4 right-0 py-20 md:p-20">
         <Header project={project} />
       </div>
       <motion.div
@@ -89,13 +89,13 @@ export const Header = ({
 }) => {
   return (
     <div className="max-w-7xl relative ml-auto py-20 md:py-40 px-4 w-full text-right">
-      <h1 className="bg-gradient-to-b from-black/40 to-black/80 bg-clip-text leading-loose text-transparent drop-shadow-2xl text-3xl md:text-5xl font-bold dark:text-white pb-3">
+      <h1 className="bg-gradient-to-b from-black/40 to-black/80 bg-clip-text leading-loose text-transparent drop-shadow-2xl text-2xl md:text-5xl font-bold dark:text-white pb-3">
         {project.title}
       </h1>
-      <p className="text-base md:text-xl mt-2 mb-2 font-semibold text-right">
+      <p className="text-sm md:text-xl mt-2 mb-2 font-semibold text-right">
         {project.tagline}
       </p>
-      <p className="text-base md:text-xl mb-5">
+      <p className="text-sm md:text-xl mb-5">
         {project.description}
       </p>
       <div className="space-x-4 h-0 overflow-visible">

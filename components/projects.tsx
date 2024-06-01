@@ -1,6 +1,6 @@
 'use client';
 
-import { Component } from "lucide-react"
+import { ArrowLeft, ArrowRight, Component } from "lucide-react"
 import { ProjectParallax } from "./project-background"
 import { projectData } from "@/project-data"
 import { useState } from "react"
@@ -9,6 +9,14 @@ import { cn } from "@/lib/utils";
 export const Projects = () => {
 
     const [currentProject, setCurrentProject] = useState(0);
+
+    const handlePrevious = () => {
+      setCurrentProject((prev) => (prev === 0 ? projectData.length - 1 : prev - 1));
+    };
+  
+    const handleNext = () => {
+      setCurrentProject((prev) => (prev === projectData.length - 1 ? 0 : prev + 1));
+    };
 
     return (
         <section className="pt-20 w-full bg-gray-100 shadow-lg relative overflow-hidden z-0" id="projects">
@@ -24,40 +32,29 @@ export const Projects = () => {
             </div>
             <div className="flex justify-center items-start space-x-4 text-gray-500 z-50">
                 <button 
-                  onClick={() => setCurrentProject(0)}
-                  className={cn("inline-block rounded-lg bg-white shadow-2xl border-2 border-gray-200 px-3 py-1 text-lg hover:shadow-md hover:bg-lime-100 transition-all",
-                    currentProject === 0 && "bg-lime-100 border-lime-400"
+                  onClick={handlePrevious}
+                  className={cn("flex group rounded-lg bg-white shadow-2xl border-2 border-gray-200 px-3 py-1 text-lg hover:shadow-md hover:bg-lime-100 transition-all",
                   )}
                 >
-                    NoHire
+                    <span className="sr-only">previous project</span>
+                    <ArrowLeft className="h-4 w-4 my-auto mr-2 group-hover:-translate-x-1 transition-transform" />
+                    prev.js
                 </button>
                 <Component className="h-4 w-4 my-auto" />
                 <button 
-                  onClick={() => setCurrentProject(1)}
-                  className={cn("inline-block rounded-lg bg-white shadow-2xl border-2 border-gray-200 px-3 py-1 text-lg hover:shadow-md hover:bg-green-100 transition-all",
-                    currentProject === 1 && "bg-green-100 border-green-400"
+                  onClick={handleNext}
+                  className={cn("flex group rounded-lg bg-white shadow-2xl border-2 border-gray-200 px-3 py-1 text-lg hover:shadow-md hover:bg-green-100 transition-all",
                   )}
                 >
-                    The Carbon Crucible
+                    <span className="sr-only">next project</span>
+                    next.js
+                    <ArrowRight className="h-4 w-4 my-auto ml-2 group-hover:translate-x-1 transition-transform" />
                 </button>
-                <Component className="h-4 w-4 my-auto" />
-                <button
-                  onClick={() => setCurrentProject(2)}
-                  className={cn("inline-block rounded-lg bg-white shadow-2xl border-2 border-gray-200 px-3 py-1 text-lg hover:shadow-md hover:bg-green-100 transition-all",
-                    currentProject === 2 && "bg-green-100 border-green-400"
-                  )}
-                >
-                    tutoring website
-                </button>
-                <Component className="h-4 w-4 my-auto" />
-                <button
-                  onClick={() => setCurrentProject(3)}
-                  className={cn("inline-block rounded-lg bg-white shadow-2xl border-2 border-gray-200 px-3 py-1 text-lg hover:shadow-md hover:bg-lime-100 transition-all",
-                    currentProject === 3 && "bg-lime-100 border-lime-400"
-                  )}
-                >
-                    jeremyquinto.com <span className="text-sm text-red-300">(deprecated)</span>
-                </button>
+            </div>
+            <div className="flex justify-center items-center">
+              {[0, 1, 2, 3].map((index) => (
+                <div key={index} className={cn("w-3 h-3 bg-gray-400 rounded-full mx-1", currentProject === index && "bg-emerald-300")} />
+              ))}
             </div>
           </div>
           <ProjectParallax 

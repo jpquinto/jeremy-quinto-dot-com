@@ -103,7 +103,7 @@ export const projectData: Project[] = [
     },
     {
       title: 'jeremyquinto.com',
-      tagline: 'my old portfolio site, now retired in favor of this one (it was a little tacky)',
+      tagline: 'my old portfolio site, now retired in favor of this one',
       description: 'created using Next.js, and implemented Three.js for 3D animations and interactivity',
       githubUrl: '',
       websiteUrl: 'https://portfolio-2-0-zeta-nine.vercel.app/',

@@ -56,11 +56,11 @@ export const Navbar = () => {
     <header className={cn("px-5 lg:px-8 h-14 flex items-center top-0 fixed w-[100dvw] transition-colors duration-500 z-[999]",
       scrolled && 'bg-white'
     )}>
-      <Link className="flex items-center justify-center" href="#">
+      <Link className="hidden md:flex items-center justify-center" href="#">
         <CodeIcon className="h-6 w-6" />
         <span className="sr-only">Jeremy Quinto</span>
       </Link>
-      <nav className="ml-auto mr-5 flex gap-4 sm:gap-6">
+      <nav className="mx-auto md:ml-auto md:mr-5 flex gap-4 sm:gap-6">
         {['welcome', 'skills', 'projects', 'about', 'blog', 'contact'].map((section) => (
           <Link
             key={section}

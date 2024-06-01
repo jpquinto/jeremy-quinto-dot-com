@@ -10,7 +10,7 @@ export const About = () => {
                 <div className="inline-block text-purple-700 rounded-lg bg-gray-100 px-3 py-1">#bio</div>
                 <h2 className="bg-gradient-to-b from-black/80 to-black/20 bg-clip-text text-transparent drop-shadow-2xl text-4xl tracking-tight sm:text-6xl pb-3">about me</h2>
                 <p className="max-w-[900px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
-                  jeremy quinto is a skilled software developer with expertise in a variety of technologies and frameworks.
+                  learn more about me, outside of the technical stuff
                 </p>
               </div>
             </div>

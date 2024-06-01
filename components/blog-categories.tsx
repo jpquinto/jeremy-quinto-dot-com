@@ -7,7 +7,7 @@ export const BlogCategories = () => {
             <div className="flex justify-center mt-10">
                 <h3 className="bg-gradient-to-b from-black/80 to-black/20 bg-clip-text text-transparent drop-shadow-2xl text-2xl tracking-tight sm:text-4xl italic px-3 pb-3">categories</h3>
             </div>
-            <div className="mx-10 flex justify-center flex-col">
+            <div className="md:mx-10 flex justify-center flex-col">
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
                     <Link
                         href='https://blog.jeremyquinto.com/series/web-development' 

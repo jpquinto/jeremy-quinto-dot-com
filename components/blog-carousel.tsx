@@ -13,7 +13,7 @@ export const BlogCarousel = ({
 }: BlogCarouselProps) => {
 
     return (
-        <div className="mx-10 flex justify-center flex-col">
+        <div className="md:mx-10 flex justify-center flex-col">
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 auto-rows-auto">
                 {posts.map((post) => (
                     <BlogCarouselItem post={post} key={post.id} />

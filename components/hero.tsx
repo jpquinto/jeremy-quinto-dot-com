@@ -22,10 +22,10 @@ export const Hero = () => {
         <section className="w-full py-12 h-[100dvh] overflow-hidden flex justify-center items-center relative" id="welcome">
           <Boxes />
           <div className="container px-4 md:px-6 space-y-6 md:space-y-10">
-            <div className="max-w-[1300px] mx-auto gap-4 px-4 sm:px-6 md:gap-16">
+            <div className="max-w-[1300px] mx-auto gap-4 sm:px-6 md:gap-16">
               <div className="col-span-2">
                 {/* <div className="p-2 bg-gradient-to-r from-cyan-200 to-pink-200 rounded-2xl shadow-lg"> */}
-                <div className={cn("mx-auto w-[60%] transition-all duration-1000 p-2 bg-gradient-to-r from-emerald-400 to-lime-400 rounded-full shadow-lg",
+                <div className={cn("mx-auto w-[70%] transition-all duration-1000 p-2 bg-gradient-to-r from-emerald-400 to-lime-400 rounded-full shadow-lg",
                     animationStart && "w-[90%]"
                 )}>
                     <div className="p-2 bg-gradient-to-r from-emerald-300 to-lime-300 delay-500 rounded-full shadow-lg">
