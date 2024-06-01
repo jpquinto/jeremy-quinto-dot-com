@@ -41,16 +41,16 @@ export const Hero = () => {
                 <p className="mx-auto max-w-[700px] text-gray-500 md:text-xl dark:text-gray-400 mt-10 text-center">
                   entry level full stack web developer with a passion for building web applications
                 </p>
-                <div className="mt-4 flex justify-center items-start space-x-4 text-gray-500">
-                    <div className="inline-block rounded-lg bg-white shadow-2xl border-2 border-green-400 px-3 py-1 text-lg">
+                <div className="mt-4 flex flex-wrap justify-center items-start space-x-4 text-gray-500">
+                    <div className="inline-block rounded-lg bg-white shadow-2xl border-2 border-green-400 px-3 py-1 text-sm md:text-base lg:text-lg">
                         software developer
                     </div>
                     <Component className="h-4 w-4 my-auto" />
-                    <div className="inline-block rounded-lg bg-white shadow-2xl border-2 border-green-300 px-3 py-1 text-lg">
+                    <div className="inline-block rounded-lg bg-white shadow-2xl border-2 border-green-300 px-3 py-1 text-sm md:text-base lg:text-lg">
                         full-stack
                     </div>
-                    <Component className="h-4 w-4 my-auto" />
-                    <div className="inline-block rounded-lg bg-white shadow-2xl border-2 border-lime-400 px-3 py-1 text-lg">
+                    <Component className="hidden lg:inline-block h-4 w-4 my-auto" />
+                    <div className="block lg:inline-block rounded-lg bg-white shadow-2xl mt-3 lg:mt-0 border-2 border-lime-400 px-3 py-1 text-sm md:text-base lg:text-lg">
                         bay area
                     </div>
                 </div>
