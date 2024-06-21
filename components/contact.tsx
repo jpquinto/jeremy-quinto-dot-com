@@ -54,7 +54,7 @@ export const Contact = () => {
             <div className="container grid items-center justify-center gap-4 px-4 text-center md:px-6">
               <div className="space-y-3">
                 <div className="inline-block text-purple-700 rounded-lg bg-gray-100 px-3 py-1">#contact</div>
-                <h2 className="text-3xl tracking-tight md:text-4xl/tight"><span className="text-amber-600">async function</span> contactMe</h2>
+                <h2 className="text-3xl tracking-tight md:text-4xl/tight">contact me</h2>
                 <p className="mx-auto max-w-[600px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
                   have a project in mind or just want to say hello? fill out the form below and i&apos;ll get back to you as
                   soon as possible
