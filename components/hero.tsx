@@ -45,11 +45,11 @@ export const Hero = () => {
                     <div className="inline-block rounded-lg bg-white shadow-2xl border-2 border-green-400 px-3 py-1 text-sm md:text-base lg:text-lg">
                         software developer
                     </div>
-                    <Component className="h-4 w-4 my-auto" />
+                    <Component role="presentation" className="h-4 w-4 my-auto" />
                     <div className="inline-block rounded-lg bg-white shadow-2xl border-2 border-green-300 px-3 py-1 text-sm md:text-base lg:text-lg">
                         full-stack
                     </div>
-                    <Component className="hidden lg:inline-block h-4 w-4 my-auto" />
+                    <Component role="presentation" className="hidden lg:inline-block h-4 w-4 my-auto" />
                     <div className="block lg:inline-block rounded-lg bg-white shadow-2xl mt-3 lg:mt-0 border-2 border-lime-400 px-3 py-1 text-sm md:text-base lg:text-lg">
                         bay area
                     </div>

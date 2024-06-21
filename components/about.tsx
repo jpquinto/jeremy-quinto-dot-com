@@ -14,24 +14,24 @@ export const About = () => {
                 </p>
               </div>
             </div>
-            <Component className="text-gray-500 h-4 w-4 mx-auto" />
+            <Component role="presentation" className="text-gray-500 h-4 w-4 mx-auto" />
             <div className="mx-auto grid items-start gap-4 sm:max-w-4xl sm:grid-cols-2 lg:max-w-5xl lg:grid-cols-3 text-justify">
               <div className="h-full grid gap-1 hover:bg-slate-100 transition-all hover:shadow-md p-2 rounded-xl">
-                <p className="text-3xl">🎓</p>
+                <p role="heading" className="text-3xl">🎓</p>
                 <h3 className="text-xl font-bold tracking-tight">education</h3>
                 <p className="text-sm text-gray-500 dark:text-gray-400">
                   i graduated from UC San Diego in summer 2023 with a B.S. in Mathematics - Computer Science and a minor in Data Science
                 </p>
               </div>
               <div className="h-full grid gap-1 hover:bg-slate-100 transition-all hover:shadow-md p-2 rounded-xl">
-                <p className="text-3xl">🌉</p>
+                <p role="heading" className="text-3xl">🌉</p>
                 <h3 className="text-xl font-bold tracking-tight">bay area</h3>
                 <p className="text-sm text-gray-500 dark:text-gray-400">
                   i was born and raised in the san francisco bay area, where i am currently living. i have never lived outside California
                 </p>
               </div>
               <div className="h-full grid gap-1 hover:bg-slate-100 transition-all hover:shadow-md p-2 rounded-xl">
-                <p className="text-3xl">🏀</p>
+                <p role="heading" className="text-3xl">🏀</p>
                 <h3 className="text-xl font-bold tracking-tight">hobbies</h3>
                 <p className="text-sm text-gray-500 dark:text-gray-400">
                   i love basketball, my favorite team is the Golden State Warriors! i also dabble in music production for fun

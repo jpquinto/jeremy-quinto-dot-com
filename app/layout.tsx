@@ -4,7 +4,6 @@ import { SEO } from "@/components/SEO";
 import type { Metadata } from "next";
 import "./globals.css";
 import localFont from 'next/font/local';
-import { Socials } from "@/components/socials";
 
 const Aeonik = localFont({ 
   src: [

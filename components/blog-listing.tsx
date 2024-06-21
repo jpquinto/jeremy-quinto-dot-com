@@ -5,7 +5,7 @@ import Link from "next/link"
 import { useEffect, useState } from "react";
 import { BlogCarousel } from "./blog-carousel";
 import { BlogCategories } from "./blog-categories";
-import { ArrowUp, ChevronUp, Component } from "lucide-react";
+import { ChevronUp, Component } from "lucide-react";
 
 export const BlogListing = () => {
 
@@ -37,20 +37,25 @@ export const BlogListing = () => {
                 <p className="max-w-[900px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
                   i write some tutorials and guides on web development, programming, and other tech-related topics. you can check them out below
                 </p>
-                <Link href='/blog' target="_blank" className="text-purple-700 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed hover:text-amber-700 hover:underline transition-colors">
+                <Link 
+                  href='/blog'
+                  target="_blank"
+                  className="text-purple-700 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed hover:text-amber-700 hover:underline transition-colors"
+                  aria-label="see full blog (opens in new tab)"
+                >
                   see full blog →
                 </Link>
               </div>
             </div>
             <div className="space-y-6">
               <BlogCarousel posts={blogPosts} />
-              <Component className="text-gray-500 h-4 w-4 mx-auto" />
+              <Component role="presentation" className="text-gray-500 h-4 w-4 mx-auto" />
               <BlogCategories />
             </div>
           </div>
           <div className="absolute bottom-0 left-0 w-full flex justify-center z-50">
             <button onClick={() => scrollToTop()} className="mb-3 text-muted-foreground">
-              <ChevronUp className="h-4 w-4 mx-auto" />
+              <ChevronUp role="presentation" className="h-4 w-4 mx-auto" />
               <p>scroll to top</p>
             </button>
           </div>

@@ -89,9 +89,9 @@ export const Header = ({
 }) => {
   return (
     <div className="max-w-7xl relative ml-auto py-20 md:py-40 px-4 w-full text-right">
-      <h1 className="bg-gradient-to-b from-black/40 to-black/80 bg-clip-text leading-loose text-transparent drop-shadow-2xl text-2xl md:text-5xl font-bold dark:text-white pb-3">
+      <h2 className="bg-gradient-to-b from-black/40 to-black/80 bg-clip-text leading-loose text-transparent drop-shadow-2xl text-2xl md:text-5xl font-bold dark:text-white pb-3">
         {project.title}
-      </h1>
+      </h2>
       <p className="text-sm md:text-xl mt-2 mb-2 font-semibold text-right">
         {project.tagline}
       </p>

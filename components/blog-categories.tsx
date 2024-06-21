@@ -13,6 +13,7 @@ export const BlogCategories = () => {
                         href='https://blog.jeremyquinto.com/series/web-development' 
                         className="h-full grid gap-1 hover:bg-white transition-all hover:shadow-md p-3 rounded-xl"
                         target="_blank"
+                        aria-label="web development series (opens in new tab)"
                     >
                         <h3 className="text-xl font-bold tracking-tight">💻 web development</h3>
                         <p className="mt-2 text-sm text-gray-500 dark:text-gray-400">
@@ -24,6 +25,7 @@ export const BlogCategories = () => {
                         href='https://blog.jeremyquinto.com/series/algorithms'
                         className="h-full grid gap-1 hover:bg-white transition-all hover:shadow-md p-3 rounded-xl"
                         target="_blank"
+                        aria-label="algorithms series (opens in new tab)"
                     >
                         <h3 className="text-xl font-bold tracking-tight">➗ algorithms</h3>
                         <p className="mt-2 text-sm text-gray-500 dark:text-gray-400">

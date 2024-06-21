@@ -12,6 +12,7 @@ export const Socials = () => {
                         href="https://github.com/jpquinto"
                         target="_blank"
                         title="GitHub"
+                        aria-label="GitHub (opens in a new tab)"
                     >
                         <FontAwesomeIcon icon={faGithub} className="h-7 w-7 my-auto text-[#25292d] hover:text-[#99a8be] transition-colors" />
                     </Link>
@@ -21,6 +22,7 @@ export const Socials = () => {
                         href="https://www.linkedin.com/in/jeremy-quinto/"
                         target="_blank"
                         title="LinkedIn"
+                        aria-label="LinkedIn (opens in a new tab)"
                     >
                         <FontAwesomeIcon icon={faLinkedin} className="h-7 w-7 my-auto text-[#25292d] hover:text-[#0A66C2] transition-colors" />
                     </Link>
@@ -30,6 +32,7 @@ export const Socials = () => {
                         href="https://blog.jeremyquinto.com/"
                         target="_blank"
                         title="Blog"
+                        aria-label="Blog (opens in a new tab)"
                     >
                         <FontAwesomeIcon icon={faBlog} className="h-7 w-7 my-auto text-[#25292d] hover:text-slate-400 transition-colors" />
                     </Link>

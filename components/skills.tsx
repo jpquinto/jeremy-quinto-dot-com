@@ -17,42 +17,42 @@ export const Skills = () => {
             </div>
             <div className="mx-auto grid items-start gap-4 sm:max-w-4xl sm:grid-cols-2 lg:max-w-5xl lg:grid-cols-3">
               <div className="h-full grid gap-1 hover:bg-slate-100/50 transition-all hover:shadow-md p-2 rounded-xl group">
-                <Laptop className="group-hover:text-cyan-300 transition-colors" />
+                <Laptop role="presentation" className="group-hover:text-cyan-300 transition-colors" />
                 <h3 className="text-xl font-bold tracking-tight">frontend</h3>
                 <p className="text-sm text-gray-500 dark:text-gray-400">
                   proficient in React, Next.js, Tailwind, and more for building responsive and interactive user interfaces
                 </p>
               </div>
               <div className="h-full grid gap-1 hover:bg-slate-100/50 transition-all hover:shadow-md p-2 rounded-xl group">
-                <Server className="group-hover:text-fuchsia-300 transition-colors" />
+                <Server role="presentation" className="group-hover:text-fuchsia-300 transition-colors" />
                 <h3 className="text-xl font-bold tracking-tight">backend</h3>
                 <p className="text-sm text-gray-500 dark:text-gray-400">
                   experienced in Node.js for building scalable and secure server-side applications
                 </p>
               </div>
               <div className="h-full grid gap-1 hover:bg-slate-100/50 transition-all hover:shadow-md p-2 rounded-xl group">
-                <Database className="group-hover:text-green-300 transition-colors" />
+                <Database role="presentation" className="group-hover:text-green-300 transition-colors" />
                 <h3 className="text-xl font-bold tracking-tight">database management</h3>
                 <p className="text-sm text-gray-500 dark:text-gray-400">
                   knowledgeable in SQL and NoSQL databases, including MySQL, PostgreSQL, and MongoDB
                 </p>
               </div>
               <div className="h-full grid gap-1 hover:bg-slate-100/50 transition-all hover:shadow-md p-2 rounded-xl group">
-                <Cloud className="group-hover:text-amber-500 transition-colors" />
+                <Cloud role="presentation" className="group-hover:text-amber-500 transition-colors" />
                 <h3 className="text-xl font-bold tracking-tight">cloud</h3>
                 <p className="text-sm text-gray-500 dark:text-gray-400">
                   familiar with many AWS cloud services, including S3, Lambda, Step Functions, CloudFormation
                 </p>
               </div>
               <div className="h-full grid gap-1 hover:bg-slate-100/50 transition-all hover:shadow-md p-2 rounded-xl group">
-                <Fingerprint className="group-hover:text-red-300 transition-colors" />
+                <Fingerprint role="presentation" className="group-hover:text-red-300 transition-colors" />
                 <h3 className="text-xl font-bold tracking-tight">security</h3>
                 <p className="text-sm text-gray-500 dark:text-gray-400">
                   capable of implementing authentication mechanisms using OAuth 2.0 and JWT
                 </p>
               </div>
               <div className="h-full grid gap-1 hover:bg-slate-100/50 transition-all hover:shadow-md p-2 rounded-xl group">
-                <SearchCheck className="group-hover:text-teal-300 transition-colors" />
+                <SearchCheck role="presentation" className="group-hover:text-teal-300 transition-colors" />
                 <h3 className="text-xl font-bold tracking-tight">search engine optimization</h3>
                 <p className="text-sm text-gray-500 dark:text-gray-400">
                   knowledgeable in optimizing websites for search engines

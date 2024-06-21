@@ -67,17 +67,20 @@ export const Contact = () => {
                     placeholder="name"
                     type="text"
                     onChange={(e) => setName(e.target.value)}
+                    aria-label="name"
                   />
                   <Input 
                     className="max-w-lg flex-1"
                     placeholder="email"
                     type="email"
                     onChange={(e) => setEmail(e.target.value)}
+                    aria-label="email"
                   />
                   <Textarea
                     className="max-w-lg flex-1"
                     placeholder="message"
                     onChange={(e) => setMessage(e.target.value)}
+                    aria-label="message"
                   />
                   <Button 
                     className="w-full"

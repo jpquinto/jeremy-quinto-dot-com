@@ -40,7 +40,7 @@ export const Projects = () => {
                     <ArrowLeft className="h-4 w-4 my-auto mr-2 group-hover:-translate-x-1 transition-transform" />
                     prev.js
                 </button>
-                <Component className="h-4 w-4 my-auto" />
+                <Component role="presentation" className="h-4 w-4 my-auto" />
                 <button 
                   onClick={handleNext}
                   className={cn("flex group rounded-lg bg-white shadow-2xl border-2 border-gray-200 px-3 py-1 text-lg hover:shadow-md hover:bg-green-100 transition-all",
