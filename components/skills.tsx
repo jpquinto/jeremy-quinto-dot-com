@@ -1,7 +1,6 @@
 import { Cloud, Database, Fingerprint, Laptop, SearchCheck, Server } from "lucide-react"
 import { SkillsCarousel } from "./skills-carousel"
 
-
 export const Skills = () => {
     return (
         <section className="w-full py-12 md:py-24 lg:py-32 bg-white shadow-lg overflow-hidden" id="skills">
