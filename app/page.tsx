@@ -1,3 +1,4 @@
+import SkipLinks from "@/components/skip-links";
 import { Hero } from "@/components/hero";
 import { Skills } from "@/components/skills";
 import { Projects } from "@/components/projects";
@@ -8,6 +9,7 @@ import { BlogListing } from "@/components/blog-listing";
 export default function Home() {
   return (
       <main className="flex-1">
+        <SkipLinks />
         <Hero />
         <Skills />
         <Projects />

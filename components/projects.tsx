@@ -37,7 +37,7 @@ export const Projects = () => {
                   )}
                 >
                     <span className="sr-only">previous project</span>
-                    <ArrowLeft className="h-4 w-4 my-auto mr-2 group-hover:-translate-x-1 transition-transform" />
+                    <ArrowLeft role="presentation" className="h-4 w-4 my-auto mr-2 group-hover:-translate-x-1 transition-transform" />
                     prev.js
                 </button>
                 <Component role="presentation" className="h-4 w-4 my-auto" />
@@ -48,7 +48,7 @@ export const Projects = () => {
                 >
                     <span className="sr-only">next project</span>
                     next.js
-                    <ArrowRight className="h-4 w-4 my-auto ml-2 group-hover:translate-x-1 transition-transform" />
+                    <ArrowRight role="presentation" className="h-4 w-4 my-auto ml-2 group-hover:translate-x-1 transition-transform" />
                 </button>
             </div>
             <div className="flex justify-center items-center">

@@ -42,5 +42,6 @@ export interface Project {
     websiteUrl?: string;
     images: {
         url: string;
+        alt: string;
     }[];
 }

@@ -10,28 +10,36 @@ export const projectData: Project[] = [
         websiteUrl: 'https://no-hire.com',
         images: [
             {
-              url: "/img/projects/1/1.png"
+              url: "/img/projects/1/1.png",
+              alt: "NoHire - Application Dashboard"
             },
             {
-              url: "/img/projects/1/2.png"
+              url: "/img/projects/1/2.png",
+              alt: "NoHire - Applications Data Table"
             },
             {
-              url: "/img/projects/1/3.png"
+              url: "/img/projects/1/3.png",
+              alt: "NoHire - Application Timeline"
             },
             {
-              url: "/img/projects/1/4.png"
+              url: "/img/projects/1/4.png",
+              alt: "NoHire - File Upload"
             },
             {
-              url: "/img/projects/1/5.png"
+              url: "/img/projects/1/5.png",
+              alt: "NoHire - Notes"
             },
             {
-              url: "/img/projects/1/6.png"
+              url: "/img/projects/1/6.png",
+              alt: "NoHire - Flashcards"
             },
             {
-              url: "/img/projects/1/7.png"
+              url: "/img/projects/1/7.png",
+              alt: "NoHire - Statistics"
             },
             {
-              url: "/img/projects/1/8.png"
+              url: "/img/projects/1/8.png",
+              alt: "NoHire - Calendar Heatmap"
             },
           ]
     },
@@ -43,28 +51,36 @@ export const projectData: Project[] = [
         websiteUrl: '',
         images: [
             {
-              url: "/img/projects/2/1.png"
+              url: "/img/projects/2/1.png",
+              alt: "The Carbon Crucible - Home"
             },
             {
-              url: "/img/projects/2/2.png"
+              url: "/img/projects/2/2.png",
+              alt: "The Carbon Crucible - Why Carbon Crucible"
             },
             {
-              url: "/img/projects/2/3.png"
+              url: "/img/projects/2/3.png",
+              alt: "The Carbon Crucible - Shopping Cart"
             },
             {
-              url: "/img/projects/2/4.png"
+              url: "/img/projects/2/4.png",
+              alt: "The Carbon Crucible - CMS"
             },
             {
-              url: "/img/projects/2/5.png"
+              url: "/img/projects/2/5.png",
+              alt: "The Carbon Crucible - Orders Dashboard"
             },
             {
-              url: "/img/projects/2/6.png"
+              url: "/img/projects/2/6.png",
+              alt: "The Carbon Crucible - Products Dashboard"
             },
             {
-              url: "/img/projects/2/7.png"
+              url: "/img/projects/2/7.png",
+              alt: "The Carbon Crucible - Order Page"
             },
             {
-              url: "/img/projects/2/1.png"
+              url: "/img/projects/2/1.png",
+              alt: "The Carbon Crucible - Hero"
             },
           ]
     },
@@ -76,28 +92,36 @@ export const projectData: Project[] = [
         websiteUrl: 'https://tutoring.jeremyquinto.com',
         images: [
             {
-              url: "/img/projects/3/1.png"
+              url: "/img/projects/3/1.png",
+              alt: "tutoring.jeremyquinto.com - Home"
             },
             {
-              url: "/img/projects/3/2.png"
+              url: "/img/projects/3/2.png",
+              alt: "tutoring.jeremyquinto.com - About Me"
             },
             {
-              url: "/img/projects/3/3.png"
+              url: "/img/projects/3/3.png",
+              alt: "tutoring.jeremyquinto.com - Stuff I Teach"
             },
             {
-              url: "/img/projects/3/4.png"
+              url: "/img/projects/3/4.png",
+              alt: "tutoring.jeremyquinto.com - Scheduling Page"
             },
             {
-              url: "/img/projects/3/1.png"
+              url: "/img/projects/3/1.png",
+              alt: "tutoring.jeremyquinto.com - Home"
             },
             {
-              url: "/img/projects/3/2.png"
+              url: "/img/projects/3/2.png",
+              alt: "tutoring.jeremyquinto.com - About Me"
             },
             {
-              url: "/img/projects/3/3.png"
+              url: "/img/projects/3/3.png",
+              alt: "tutoring.jeremyquinto.com - Stuff I Teach"
             },
             {
-              url: "/img/projects/3/4.png"
+              url: "/img/projects/3/4.png",
+              alt: "tutoring.jeremyquinto.com - Scheduling Page"
             },
           ]
     },
@@ -109,28 +133,36 @@ export const projectData: Project[] = [
       websiteUrl: 'https://portfolio-2-0-zeta-nine.vercel.app/',
       images: [
           {
-            url: "/img/projects/4/1.png"
+            url: "/img/projects/4/1.png",
+            alt: "jeremyquinto.com - Home"
           },
           {
-            url: "/img/projects/4/2.png"
+            url: "/img/projects/4/2.png",
+            alt: "jeremyquinto.com - Projects"
           },
           {
-            url: "/img/projects/4/3.png"
+            url: "/img/projects/4/3.png",
+            alt: "jeremyquinto.com - Skills"
           },
           {
-            url: "/img/projects/4/4.png"
+            url: "/img/projects/4/4.png",
+            alt: "jeremyquinto.com - About Me"
           },
           {
-            url: "/img/projects/4/5.png"
+            url: "/img/projects/4/5.png",
+            alt: "jeremyquinto.com - Contact"
           },
           {
-            url: "/img/projects/4/6.png"
+            url: "/img/projects/4/6.png",
+            alt: "jeremyquinto.com - Blog"
           },
           {
-            url: "/img/projects/4/1.png"
+            url: "/img/projects/4/1.png",
+            alt: "jeremyquinto.com - Home"
           },
           {
-            url: "/img/projects/4/2.png"
+            url: "/img/projects/4/2.png",
+            alt: "jeremyquinto.com - Projects"
           },
         ]
     },
