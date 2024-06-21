@@ -38,7 +38,7 @@ export const About = () => {
                 </p>
               </div>
               <div className="h-full grid gap-1 hover:bg-slate-100 transition-all hover:shadow-md p-2 rounded-xl">
-                <p className="text-3xl">👩🏻‍🎓</p>
+                <p role="heading" className="text-3xl">👩🏻‍🎓</p>
                 <h3 className="text-xl font-bold tracking-tight">tutoring</h3>
                 <p className="text-sm text-gray-500 dark:text-gray-400">
                   for the last year, i have worked part time as a tutor, working with 15+ different students from K-12 in various math and computer science topics

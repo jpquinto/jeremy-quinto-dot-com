@@ -26,12 +26,12 @@ export const BlogCarouselItem = ({
             <div className="mt-2 flex space-x-2">
                 {post.tags.map((tag, index) => (
                     <span key={index} className="inline-block text-xs text-gray-500 bg-gray-200 px-2 py-1 rounded-full">{tag.name.toLowerCase()}</span>
-                    ))}
+                ))}
             </div>
             <Link
                 href={post.url}
                 className="mt-4 text-sm text-blue-500 group-hover:underline ml-auto"
-                aira-label="read more (opens in new tab)"
+                aria-label="read more (opens in new tab)"
             >
                 read →
             </Link>

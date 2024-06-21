@@ -73,6 +73,7 @@ export const BoxesCore = ({ className, ...rest }: { className?: string }) => {
                   strokeWidth="1.5"
                   stroke="currentColor"
                   className="absolute h-6 w-10 -top-[14px] -left-[22px] text-slate-200 stroke-[1px] pointer-events-none"
+                  role="presentation"
                 >
                   <path
                     strokeLinecap="round"

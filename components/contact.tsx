@@ -94,7 +94,10 @@ export const Contact = () => {
                 <p className="mx-auto max-w-[600px] text-amber-700 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
                   or
                 </p>
-                <p className="mx-auto max-w-[600px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
+                <p 
+                  role="heading"
+                  className="mx-auto max-w-[600px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400"
+                >
                   click below to send me an email directly
                 </p>
                 <button className="bg-gradient-to-b from-black/80 to-black/40 bg-clip-text text-transparent drop-shadow-2xl mx-auto max-w-[600px] text-black font-bold text-3xl" onClick={handleCopyEmail}>
