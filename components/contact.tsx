@@ -26,28 +26,33 @@ export const Contact = () => {
             });
       };
 
-      const handleSubmit = (event: any) => {
+      const handleSubmit = async (event: any) => {
         event.preventDefault(); 
 
-        emailjs.send(
-            "service_99twp94", 
-            "template_4dsuqo3", 
-            {
-                from_name: name,
-                from_email: email,
-                message: message,
-            }, 
-            "pyTuJn998miQE5Kvl"
-        ).then(() => {
-            setName("");
-            setEmail("");
-            setMessage("");
-            setStatus("message sent! thanks!");
-            }, () => {
-            setStatus("something went wrong! please try again.");
-            });
+        const emailBody = `From: ${name} (${email})\n\n${message}`;
 
-    }
+        try {
+          const response = await fetch('/api/sendEmail', {
+              method: 'POST',
+              headers: {
+                  'Content-Type': 'application/json',
+              },
+              body: JSON.stringify({ emailBody }),
+          });
+      
+          if (response.ok) {
+              setName("");
+              setEmail("");
+              setMessage("");
+              setStatus("message sent! thanks!");
+          } else {
+            setStatus("something went wrong! please try again.");
+          }
+        } catch (error) {
+          console.error('Error sending email:', error);
+          alert('Failed to send email');
+        }
+      }
 
     return (
         <section className="w-full py-12 md:py-24 lg:py-32" id="contact">
