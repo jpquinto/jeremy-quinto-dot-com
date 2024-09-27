@@ -1,4 +1,4 @@
-import { Footer } from "@/components/footer";
+import { Analytics } from "@vercel/analytics/react"
 import { Navbar } from "@/components/navbar";
 import { SEO } from "@/components/SEO";
 import type { Metadata } from "next";
@@ -67,6 +67,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <Analytics />
       <SEO title={title} description={description} />
       <body className={Aeonik.className}>
         <div className="flex flex-col min-h-[100dvh] max-w-[100dvw] overflow-x-hidden relative">
