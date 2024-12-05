@@ -1,30 +1,14 @@
-import { Analytics } from "@vercel/analytics/react"
+import { Analytics } from "@vercel/analytics/react";
 import { Navbar } from "@/components/navbar";
 import { SEO } from "@/components/SEO";
 import type { Metadata } from "next";
 import "./globals.css";
-import localFont from 'next/font/local';
+import { Inter } from 'next/font/google'; 
 
-const Aeonik = localFont({ 
-  src: [
-    {
-      path: "fonts/Aeonik_Regular.ttf",
-      weight: "400",
-    },
-    {
-      path: "fonts/Aeonik_Light.ttf",
-      weight: "300",
-    },
-    {
-      path: "fonts/Aeonik_Black.ttf",
-      weight: "900",
-    },
-    {
-      path: "fonts/Aeonik_Bold.ttf",
-      weight: "700",
-    },
-  ]
-})
+const inter = Inter({
+  subsets: ["latin"],
+  weight: ["300", "400", "700", "900"], 
+});
 
 const title = "Jeremy Quinto | Software Developer";
 const description = "A full stack software developer based in the Bay Area, California.";
@@ -66,14 +50,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className={inter.className}> {/* Apply the Inter font globally */}
       <Analytics />
       <SEO title={title} description={description} />
-      <body className={Aeonik.className}>
+      <body>
         <div className="flex flex-col min-h-[100dvh] max-w-[100dvw] overflow-x-hidden relative">
           <Navbar />
           {children}
-          {/* <Footer /> */}
         </div>
       </body>
     </html>
