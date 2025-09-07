@@ -1,40 +1,32 @@
 "use client";
 import React from "react";
-import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
 
 export const BoxesCore = ({ className, ...rest }: { className?: string }) => {
   const rows = new Array(60).fill(1);
   const cols = new Array(50).fill(1);
   let colors = [
-    // "--sky-100",
-    // "--cyan-100",
-    // "--blue-100",
-    // "--pink-100",
-    // "--rose-100",
-    // "--fuchsia-100",
-    "--emerald-100",
-    "--emerald-200",
-    "--green-100",
-    "--green-200",
-    "--lime-100",
-    "--lime-200",
-    "--white",
-    "--white",
-    "--white",
+    "bg-emerald-100",
+    "bg-emerald-200",
+    "bg-green-100",
+    "bg-green-200",
+    "bg-lime-100",
+    "bg-lime-200",
+    "bg-white",
+    "bg-white",
+    "bg-white",
+    "bg-white",
+    "bg-white",
+    "bg-white",
   ];
   const getRandomColor = () => {
     return colors[Math.floor(Math.random() * colors.length)];
   };
 
-  const getRandomDelay = () => {
-    return (Math.random() * 10);
-  };
-
   return (
     <div
       style={{
-        transform: `translate(-40%,-60%) skewX(-48deg) scale(0.8) skewY(14deg) rotate(0deg) translateZ(0)`,
+        transform: `translate(-40%,-60%) skewX(-48deg) scale(1.3) skewY(14deg) rotate(0deg) translateZ(0)`,
       }}
       className={cn(
         "fixed left-1/4 p-4 top-0 flex w-full h-full -z-20 opacity-50",
@@ -43,27 +35,17 @@ export const BoxesCore = ({ className, ...rest }: { className?: string }) => {
       {...rest}
     >
       {rows.map((_, i) => (
-        <motion.div
+        <div
           key={`row` + i}
           className="w-16 h-8 border-l border-slate-200 relative opacity-70"
         >
           {cols.map((_, j) => (
-            <motion.div
-              animate={{
-                backgroundColor: [
-                  `var(--white)`,
-                  `var(${getRandomColor()})`,
-                  `var(--white)`,
-                ],
-                transition: {
-                  duration: 2, // Increase duration to make flicker slower
-                  repeat: Infinity,
-                  repeatType: "mirror",
-                  delay: getRandomDelay(),
-                },
-              }}
+            <div
               key={`col` + j}
-              className="w-16 h-8 border-r border-t border-slate-400 relative"
+              className={cn(
+                "w-16 h-8 border-r border-t border-slate-400 relative",
+                getRandomColor()
+              )}
             >
               {j % 2 === 0 && i % 2 === 0 ? (
                 <svg
@@ -72,7 +54,7 @@ export const BoxesCore = ({ className, ...rest }: { className?: string }) => {
                   viewBox="0 0 24 24"
                   strokeWidth="1.5"
                   stroke="currentColor"
-                  className="absolute h-6 w-10 -top-[14px] -left-[22px] text-slate-200 stroke-[1px] pointer-events-none"
+                  className={`absolute h-6 w-10 -top-[14px] -left-[22px] text-slate-200 stroke-[1px] pointer-events-none`}
                   role="presentation"
                 >
                   <path
@@ -82,9 +64,9 @@ export const BoxesCore = ({ className, ...rest }: { className?: string }) => {
                   />
                 </svg>
               ) : null}
-            </motion.div>
+            </div>
           ))}
-        </motion.div>
+        </div>
       ))}
     </div>
   );

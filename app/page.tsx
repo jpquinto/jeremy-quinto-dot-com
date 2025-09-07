@@ -8,15 +8,14 @@ import { BlogListing } from "@/components/blog-listing";
 
 export default function Home() {
   return (
-      <main className="flex-1">
-        <SkipLinks />
-        <Hero />
-        <Skills />
-        <Projects />
-        <About />
-        <BlogListing />
-        <Contact />
-      </main>
+    <main className="flex-1">
+      <SkipLinks />
+      <Hero />
+      <Skills />
+      {/* <Projects /> */}
+      <About />
+      <BlogListing />
+      <Contact />
+    </main>
   );
 }
-
