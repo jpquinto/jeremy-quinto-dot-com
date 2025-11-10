@@ -39,7 +39,7 @@ export const Hero = () => {
                     </div>
                 </div>
                 <p className="mx-auto max-w-[700px] text-gray-500 md:text-xl dark:text-gray-400 mt-10 text-center">
-                  entry level full stack web developer with a passion for building web applications
+                  full stack software engineer with a passion for building scalable and cost-effective cloud solutions{`!`}
                 </p>
                 <div className="mt-4 flex flex-wrap justify-center items-start space-x-4 text-gray-500">
                     <div className="inline-block rounded-lg bg-white shadow-2xl border-2 border-green-400 px-3 py-1 text-sm md:text-base lg:text-lg">
