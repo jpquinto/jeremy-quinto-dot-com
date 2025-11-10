@@ -38,6 +38,13 @@ export const Certifications = () => {
     },
   ];
 
+  const hexColors = ["hex-gray", "hex-emerald", "hex-lime", "hex-green"];
+
+  // Get random hex color
+  const getRandomHexColor = () => {
+    return hexColors[Math.floor(Math.random() * hexColors.length)];
+  };
+
   // Calculate opacity based on distance from center
   const getOpacityByDistance = (
     rowIndex: number,
@@ -72,7 +79,7 @@ export const Certifications = () => {
           certifications
         </h3>
         <p className="max-w-[900px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
-          i am 4X AWS certified, demonstrating that i know my way around the
+          i am 4x AWS certified, demonstrating that i know my way around the
           cloud
         </p>
       </div>
@@ -134,7 +141,7 @@ export const Certifications = () => {
                           }}
                         >
                           <Image
-                            src="/img/certifications/hex.png"
+                            src={`/img/certifications/${getRandomHexColor()}.png`}
                             alt="Empty hexagon"
                             width={508}
                             height={586}
