@@ -24,8 +24,7 @@ export const Skills = () => {
                 capabilities
               </h2>
               <p className="max-w-[900px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
-                i know technologies and tools that enable me to build full-stack
-                web applications from scratch
+                technologies and tools that enable me to architect, build, and deploy applications from top to bottom
               </p>
             </div>
           </div>

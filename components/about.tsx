@@ -26,7 +26,7 @@ export const About = () => {
         />
         <div className="mx-auto grid items-start gap-4 sm:max-w-4xl sm:grid-cols-2 lg:max-w-5xl lg:grid-cols-3 text-justify">
           <div className="h-full grid gap-1 hover:bg-slate-100 transition-all hover:shadow-md p-2 rounded-xl">
-            <p role="heading" className="text-3xl">
+            <p role="heading" className="-translate-x-3 text-7xl mb-5">
               🎓
             </p>
             <h3 className="text-xl font-bold tracking-tight">education</h3>
@@ -36,7 +36,7 @@ export const About = () => {
             </p>
           </div>
           <div className="h-full grid gap-1 hover:bg-slate-100 transition-all hover:shadow-md p-2 rounded-xl">
-            <p role="heading" className="text-3xl">
+            <p role="heading" className="-translate-x-3 text-7xl mb-5">
               🌉
             </p>
             <h3 className="text-xl font-bold tracking-tight">bay area</h3>
@@ -46,13 +46,13 @@ export const About = () => {
             </p>
           </div>
           <div className="h-full grid gap-1 hover:bg-slate-100 transition-all hover:shadow-md p-2 rounded-xl">
-            <p role="heading" className="text-3xl">
+            <p role="heading" className="-translate-x-3 text-7xl mb-5">
               🏀
             </p>
             <h3 className="text-xl font-bold tracking-tight">hobbies</h3>
             <p className="text-sm text-gray-500 dark:text-gray-400">
               i love basketball, my favorite team is the Golden State Warriors!
-              i also dabble in music production for fun
+              i also spend a lot time at the gym getting shredded
             </p>
           </div>
         </div>

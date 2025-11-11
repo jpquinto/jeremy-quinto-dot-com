@@ -53,26 +53,42 @@ export const Navbar = () => {
   }, []);
 
   return (
-    <header className={cn("px-5 lg:px-8 h-14 flex items-center top-0 fixed w-[100dvw] transition-colors duration-500 z-[999]",
-      scrolled && 'bg-white'
-    )}>
-      <Link className="hidden md:flex items-center justify-center" href="#" role="button">
-        <CodeIcon className="h-6 w-6" />
-        <span className="sr-only">Jeremy Quinto</span>
-      </Link>
-      <nav className="mx-auto md:ml-auto md:mr-5 flex gap-4 sm:gap-6">
-        {['welcome', 'skills', 'projects', 'about', 'blog', 'contact'].map((section) => (
-          <Link
-            key={section}
-            className={cn("text-sm font-medium hover:underline underline-offset-4",
-              activeSection === section ? 'underline' : ''
-            )}
-            href={`#${section}`}
-          >
-            {section}
-          </Link>
-        ))}
-      </nav>
+    <header className="top-0 fixed z-[999]">
+      <div
+        className={cn(
+          "px-5 lg:px-8 h-14 flex items-center w-[100dvw] transition-colors duration-500 z-[999]",
+          scrolled && "bg-white"
+        )}
+      >
+        <Link
+          className="hidden md:flex items-center justify-center"
+          href="#"
+          role="button"
+        >
+          <CodeIcon className="h-6 w-6" />
+          <span className="sr-only">Jeremy Quinto</span>
+        </Link>
+        <nav className="mx-auto md:ml-auto md:mr-5 flex gap-4 sm:gap-6">
+          {["welcome", "skills", "projects", "about", "blog", "contact"].map(
+            (section) => (
+              <Link
+                key={section}
+                className={cn(
+                  "text-sm font-medium hover:underline underline-offset-4",
+                  activeSection === section ? "underline" : ""
+                )}
+                href={`#${section}`}
+              >
+                {section}
+              </Link>
+            )
+          )}
+        </nav>
+      </div>
+      <div className={cn("w-[100dvw] h-[50px] md:h-[100px] transition-colors duration-500 z-[999] pointer-events-none",
+        scrolled && "bg-gradient-to-b from-white to-transparent"
+      )}>
+      </div>
     </header>
   );
 };

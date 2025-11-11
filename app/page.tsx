@@ -12,7 +12,7 @@ export default function Home() {
       <SkipLinks />
       <Hero />
       <Skills />
-      {/* <Projects /> */}
+      <Projects />
       <About />
       <BlogListing />
       <Contact />

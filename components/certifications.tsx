@@ -79,8 +79,7 @@ export const Certifications = () => {
           certifications
         </h3>
         <p className="max-w-[900px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
-          i am 4x AWS certified, demonstrating that i know my way around the
-          cloud
+          4x AWS certified - i know my way around the cloud
         </p>
       </div>
 
