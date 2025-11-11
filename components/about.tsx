@@ -9,7 +9,7 @@ export const About = () => {
       <div className="container space-y-6 px-4 md:px-6">
         <div className="flex flex-col items-center justify-center space-y-4 text-center">
           <div className="space-y-2">
-            <div className="inline-block text-lime-700 rounded-lg bg-white px-3 py-1">
+            <div className="inline-block text-lime-700 rounded-lg bg-lime-100 px-3 py-1">
               #bio
             </div>
             <h2 className="bg-gradient-to-b from-black/80 to-black/20 bg-clip-text text-transparent drop-shadow-2xl text-4xl tracking-tight sm:text-6xl pb-3">

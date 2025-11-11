@@ -1,7 +1,4 @@
-import { BrainCircuit, Cloud, CodeXml, Component, Database, Fingerprint, Hammer, Laptop, Package, SearchCheck, Server } from "lucide-react"
-import { SkillsCarousel } from "./skills-carousel"
-import Link from "next/link";
-import Image from "next/image";
+import { BrainCircuit, Cloud, CodeXml, Component, Fingerprint, Hammer, Laptop, Package, SearchCheck, Server } from "lucide-react"
 import { Certifications } from "./certifications";
 
 export const Skills = () => {
@@ -13,7 +10,7 @@ export const Skills = () => {
         <div className="container space-y-12 px-4 md:px-6">
           <div className="flex flex-col items-center justify-center space-y-4 text-center">
             <div className="space-y-2">
-              <div className="inline-block text-lime-700 rounded-lg bg-gray-100 px-3 py-1">
+              <div className="inline-block text-lime-700 rounded-lg bg-lime-100 px-3 py-1">
                 #skills
               </div>
               <h2 className="bg-gradient-to-b from-black/80 to-black/20 bg-clip-text text-transparent drop-shadow-2xl text-4xl tracking-tight sm:text-6xl pb-3">

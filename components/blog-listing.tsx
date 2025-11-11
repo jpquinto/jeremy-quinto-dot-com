@@ -32,7 +32,7 @@ export const BlogListing = () => {
           <div className="container space-y-5 px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
-                <div className="inline-block text-lime-700 rounded-lg bg-white shadow-2xl px-3 py-1">#blog</div>
+                <div className="inline-block text-lime-700 rounded-lg bg-lime-100 shadow-2xl px-3 py-1">#blog</div>
                 <h2 className="bg-gradient-to-b from-black/80 to-black/20 bg-clip-text text-transparent drop-shadow-2xl text-4xl tracking-tight sm:text-6xl pb-3">blog</h2>
                 <p className="max-w-[900px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400 pb-3">
                   i write some tutorials and guides on web development, programming, and other tech-related topics. you can check them out below

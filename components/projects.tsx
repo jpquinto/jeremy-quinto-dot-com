@@ -16,7 +16,7 @@ export const Projects = () => {
         <div className="mt-10 container space-y-4 px-4 md:px-6 pb-40">
           <div className="flex flex-col items-center justify-center space-y-4 text-center mb-5">
             <div className="space-y-2">
-              <div className="inline-block text-lime-700 rounded-lg bg-gray-100 shadow-2xl px-3 py-1">
+              <div className="inline-block text-lime-700 rounded-lg bg-lime-100 shadow-2xl px-3 py-1">
                 #projects
               </div>
               <h2 className="bg-gradient-to-b from-black/80 to-black/20 bg-clip-text text-transparent drop-shadow-2xl text-4xl tracking-tight sm:text-6xl pb-3">
