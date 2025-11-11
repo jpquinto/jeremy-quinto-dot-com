@@ -31,7 +31,7 @@ interface ImageWithIndex {
 export const PictureCarousel = ({ images, colors }: PictureCarouselProps) => {
   const defaultColors = {
     buttonBg: "bg-purple-50",
-    buttonText: "text-purple-700",
+    buttonText: "text-lime-700",
     buttonHoverBg: "hover:bg-purple-100",
     dotActive: "bg-purple-400",
     dotInactive: "bg-purple-300/70",

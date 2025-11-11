@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export const Sonanyms = () => {
   return (
-    <div className="w-full h-full bg-white rounded-2xl overflow-hidden b-10 relative border-2 border-gray-100">
+    <div className="w-full h-full bg-white rounded-2xl overflow-hidden b-10 relative border-2 border-gray-100 shadow-lg transition-shadow hover:shadow-2xl">
       {/* Background Image */}
       <div className="absolute bottom-0 left-0 opacity-70 h-1/3 w-full bg-gradient-to-t from-[#2B5078] via-[#88A9BE] to-transparent z-0"></div>
       {/* Content */}
@@ -55,7 +55,10 @@ export const Sonanyms = () => {
             DynamoDB
           </span>
           <span className="px-3 py-1 bg-[#4B709A] text-white rounded-full text-sm font-medium">
-            WebSocket API Gateway
+            WS API Gateway
+          </span>
+          <span className="px-3 py-1 bg-[#4B709A] text-white rounded-full text-sm font-medium">
+            Terraform
           </span>
         </div>
 

@@ -6,6 +6,7 @@ import { BlogPost } from "@/types";
 import Image from "next/image";
 import Link from "next/link";
 import { format } from "date-fns";
+import { Component } from "lucide-react";
 
 interface BillboardifyBlogPostsProps {
     posts?: BlogPost[];
@@ -71,6 +72,13 @@ export const BillboardifyBlogPosts = ({
             </div>
           </Link>
         ))}
+        <div className="flex justify-center items-center flex-col space-y-5 pt-3">
+          <Component
+            role="presentation"
+            className="text-gray-500 h-4 w-4 mx-auto"
+          />
+          <p className="text-gray-500 italic">more coming soon!</p>
+        </div>
       </div>
     </div>
   );

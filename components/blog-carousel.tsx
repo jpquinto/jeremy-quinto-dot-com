@@ -19,7 +19,7 @@ export const BlogCarousel = ({
                     <BlogCarouselItem post={post} key={post.id} />
                 ))}
             </div>
-            <Link href='https://blog.jeremyquinto.com/' className="mt-8 text-sm text-purple-700 hover:underline self-end">see all →</Link>
+            <Link href='https://blog.jeremyquinto.com/' className="mt-8 text-sm text-lime-700 hover:underline self-end">see all →</Link>
         </div>
     )
 }

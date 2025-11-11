@@ -1,4 +1,4 @@
-import { Cloud, Database, Fingerprint, Laptop, SearchCheck, Server } from "lucide-react"
+import { BrainCircuit, Cloud, CodeXml, Component, Database, Fingerprint, Hammer, Laptop, Package, SearchCheck, Server } from "lucide-react"
 import { SkillsCarousel } from "./skills-carousel"
 import Link from "next/link";
 import Image from "next/image";
@@ -13,7 +13,7 @@ export const Skills = () => {
         <div className="container space-y-12 px-4 md:px-6">
           <div className="flex flex-col items-center justify-center space-y-4 text-center">
             <div className="space-y-2">
-              <div className="inline-block text-purple-700 rounded-lg bg-gray-100 px-3 py-1">
+              <div className="inline-block text-lime-700 rounded-lg bg-gray-100 px-3 py-1">
                 #skills
               </div>
               <h2 className="bg-gradient-to-b from-black/80 to-black/20 bg-clip-text text-transparent drop-shadow-2xl text-4xl tracking-tight sm:text-6xl pb-3">
@@ -24,86 +24,121 @@ export const Skills = () => {
                 capabilities
               </h2>
               <p className="max-w-[900px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
-                technologies and tools that enable me to architect, build, and deploy applications from top to bottom
+                technologies and tools that enable me to architect, build, and
+                deploy applications from top to bottom
               </p>
             </div>
           </div>
+          <Component
+            role="presentation"
+            className="text-gray-500 h-4 w-4 mx-auto"
+          />
           <div className="mx-auto grid items-start gap-4 sm:max-w-4xl sm:grid-cols-2 lg:max-w-5xl lg:grid-cols-3">
-            <div className="h-full grid gap-1 hover:bg-slate-100/50 transition-all hover:shadow-md p-2 rounded-xl group">
-              <Laptop
+            <div className="h-full grid gap-1 transition-all p-2 rounded-xl group hover:scale-[1.01] hover:shadow-xl">
+              <CodeXml
                 role="presentation"
-                className="group-hover:text-cyan-300 transition-colors"
+                className="group-hover:text-orange-300 transition-colors"
               />
-              <h3 className="text-xl font-bold tracking-tight">frontend</h3>
-              <p className="text-sm text-gray-500 dark:text-gray-400">
-                proficient in React, Next.js, Tailwind, and more for building
-                responsive and interactive user interfaces
+              <h3 className="text-xl font-bold tracking-tight">languages</h3>
+              <p className="text-lg text-gray-500 dark:text-gray-400">
+                TypeScript / JavaScript, Python, C++, HTML, CSS
               </p>
             </div>
-            <div className="h-full grid gap-1 hover:bg-slate-100/50 transition-all hover:shadow-md p-2 rounded-xl group">
+            <div className="h-full grid gap-1 transition-all p-2 rounded-xl group hover:scale-[1.01] hover:shadow-xl">
+              <Laptop
+                role="presentation"
+                className="group-hover:text-emerald-300 transition-colors"
+              />
+              <h3 className="text-xl font-bold tracking-tight">frontend</h3>
+              <p className="text-lg text-gray-500 dark:text-gray-400">
+                Next.js, React, Tailwind, SEO Optimization
+              </p>
+            </div>
+            <div className="h-full grid gap-1 transition-all p-2 rounded-xl group hover:scale-[1.01] hover:shadow-xl">
               <Server
                 role="presentation"
                 className="group-hover:text-fuchsia-300 transition-colors"
               />
               <h3 className="text-xl font-bold tracking-tight">backend</h3>
-              <p className="text-sm text-gray-500 dark:text-gray-400">
-                experienced in Node.js for building scalable and secure
-                server-side applications
+              <p className="text-lg text-gray-500 dark:text-gray-400">
+                Node.js, Express.js, PostgreSQL/SQL, DynamoDB
               </p>
             </div>
-            <div className="h-full grid gap-1 hover:bg-slate-100/50 transition-all hover:shadow-md p-2 rounded-xl group">
-              <Database
+            <div className="h-full grid gap-1 transition-all p-2 rounded-xl group hover:scale-[1.01] hover:shadow-xl">
+              <Package
                 role="presentation"
                 className="group-hover:text-green-300 transition-colors"
               />
               <h3 className="text-xl font-bold tracking-tight">
-                database management
+                CI/CD & deployment
               </h3>
-              <p className="text-sm text-gray-500 dark:text-gray-400">
-                knowledgeable in SQL and NoSQL databases, including MySQL,
-                PostgreSQL, and MongoDB
+              <p className="text-lg text-gray-500 dark:text-gray-400">
+                Terraform, Terragrunt, CDK, CloudFormation, Docker
               </p>
             </div>
-            <div className="h-full grid gap-1 hover:bg-slate-100/50 transition-all hover:shadow-md p-2 rounded-xl group">
+            <div className="h-full grid gap-1 transition-all p-2 rounded-xl group hover:scale-[1.01] hover:shadow-xl">
               <Cloud
                 role="presentation"
                 className="group-hover:text-amber-500 transition-colors"
               />
               <h3 className="text-xl font-bold tracking-tight">cloud</h3>
-              <p className="text-sm text-gray-500 dark:text-gray-400">
-                familiar with many AWS cloud services, including S3, Lambda,
-                Step Functions, CloudFormation
+              <p className="text-lg text-gray-500 dark:text-gray-400">
+                AWS (Lambda, API Gateway, S3, RDS, DynamoDB, VPC, Glue, IAM)
               </p>
             </div>
-            <div className="h-full grid gap-1 hover:bg-slate-100/50 transition-all hover:shadow-md p-2 rounded-xl group">
-              <Fingerprint
+            <div className="h-full grid gap-1 transition-all p-2 rounded-xl group hover:scale-[1.01] hover:shadow-xl">
+              <BrainCircuit
                 role="presentation"
-                className="group-hover:text-red-300 transition-colors"
+                className="group-hover:text-blue-600 transition-colors"
               />
-              <h3 className="text-xl font-bold tracking-tight">security</h3>
-              <p className="text-sm text-gray-500 dark:text-gray-400">
-                capable of implementing authentication mechanisms using OAuth
-                2.0 and JWT
+              <h3 className="text-xl font-bold tracking-tight">
+                AI & machine learning
+              </h3>
+              <p className="text-lg text-gray-500 dark:text-gray-400">
+                LangChain / LangGraph, AWS Bedrock, AWS SageMaker
               </p>
             </div>
-            <div className="h-full grid gap-1 hover:bg-slate-100/50 transition-all hover:shadow-md p-2 rounded-xl group">
+            <div className="h-full grid gap-1 transition-all p-2 rounded-xl group hover:scale-[1.01] hover:shadow-xl">
               <SearchCheck
                 role="presentation"
                 className="group-hover:text-teal-300 transition-colors"
               />
               <h3 className="text-xl font-bold tracking-tight">
-                search engine optimization
+                orchestration & monitoring
               </h3>
-              <p className="text-sm text-gray-500 dark:text-gray-400">
-                knowledgeable in optimizing websites for search engines
+              <p className="text-lg text-gray-500 dark:text-gray-400">
+                AWS Step Functions, EventBridge, SQS/SNS, CloudWatch, X-Ray
+              </p>
+            </div>
+            <div className="h-full grid gap-1 transition-all p-2 rounded-xl group hover:scale-[1.01] hover:shadow-xl">
+              <Fingerprint
+                role="presentation"
+                className="group-hover:text-red-300 transition-colors"
+              />
+              <h3 className="text-xl font-bold tracking-tight">
+                auth & security
+              </h3>
+              <p className="text-lg text-gray-500 dark:text-gray-400">
+                AWS Cognito, AWS IAM, OAuth, JWT, SAML
+              </p>
+            </div>
+            <div className="h-full grid gap-1 transition-all p-2 rounded-xl group hover:scale-[1.01] hover:shadow-xl">
+              <Hammer
+                role="presentation"
+                className="group-hover:text-red-700 transition-colors"
+              />
+              <h3 className="text-xl font-bold tracking-tight">
+                tools & platforms
+              </h3>
+              <p className="text-lg text-gray-500 dark:text-gray-400">
+                Figma, Notion, Git/GitHub, VS Code, Postman
               </p>
             </div>
           </div>
-
-          <div className="flex justify-center mt-10">
-            <SkillsCarousel />
-          </div>
-
+          <Component
+            role="presentation"
+            className="text-gray-500 h-4 w-4 mx-auto"
+          />
           <Certifications />
         </div>
       </section>

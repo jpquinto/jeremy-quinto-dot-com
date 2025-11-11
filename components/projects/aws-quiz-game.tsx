@@ -4,9 +4,9 @@ import Image from "next/image";
 
 export const AWSQuizGame = () => {
   return (
-    <div className="w-full h-full bg-white rounded-2xl overflow-hidden b-10 relative border-2 border-gray-100">
+    <div className="w-full h-full bg-white rounded-2xl overflow-hidden b-10 relative border-2 border-gray-100 shadow-lg transition-shadow hover:shadow-2xl">
       {/* Background Image */}
-      <div className="absolute bottom-0 left-0 opacity-70 h-1/3 w-full bg-gradient-to-t from-[#ff9900] to-transparent z-0"></div>
+      <div className="absolute bottom-0 left-0 opacity-70 h-1/3 w-full bg-gradient-to-t from-[#ff9900]/50 to-transparent z-0"></div>
       {/* Content */}
       <div className="flex flex-col justify-center space-y-6 p-5 md:p-8 relative z-10">
         {/* Title */}
@@ -65,6 +65,9 @@ export const AWSQuizGame = () => {
           </span>
           <span className="px-3 py-1 bg-[#ff9900] text-black rounded-full text-sm font-medium">
             API Gateway
+          </span>
+          <span className="px-3 py-1 bg-[#ff9900] text-black rounded-full text-sm font-medium">
+            Terraform
           </span>
         </div>
 

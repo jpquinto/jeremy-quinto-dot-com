@@ -9,7 +9,7 @@ export const Surfbored = () => {
   const [activeTab, setActiveTab] = useState<"features" | "demo">("features");
 
   return (
-    <div className="w-full h-full bg-white rounded-2xl overflow-hidden b-10 relative border-2 border-gray-100">
+    <div className="w-full h-full bg-white rounded-2xl overflow-hidden b-10 relative border-2 border-gray-100 shadow-lg transition-shadow hover:shadow-2xl">
       {/* Background Waves */}
       <div className="absolute bottom-0 left-0 w-full h-[250px] z-0 opacity-70">
         <Image

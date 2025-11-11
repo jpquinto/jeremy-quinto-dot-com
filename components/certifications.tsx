@@ -62,8 +62,8 @@ export const Certifications = () => {
     // Map distance to opacity (closer = higher opacity)
     // Max distance in this grid is about 3-4, so we'll scale accordingly
     const maxDistance = 4;
-    const minOpacity = 0.2;
-    const maxOpacity = 0.6;
+    const minOpacity = 0.3;
+    const maxOpacity = 0.7;
 
     const opacity =
       maxOpacity - (distance / maxDistance) * (maxOpacity - minOpacity);
@@ -73,9 +73,9 @@ export const Certifications = () => {
   let badgeIndex = 0;
 
   return (
-    <div className="flex flex-col items-center justify-center space-y-4 text-center">
+    <div className="flex flex-col items-center justify-center space-y-4 text-center scale-[0.95] md:scale-[1]">
       <div className="space-y-2">
-        <h3 className="bg-gradient-to-b from-black/80 to-black/20 bg-clip-text text-transparent drop-shadow-2xl text-3xl tracking-tight sm:text-5xl pb-3">
+        <h3 className="bg-gradient-to-b from-black/80 to-black/20 bg-clip-text text-transparent drop-shadow-2xl text-3xl tracking-tight sm:text-4xl pb-3">
           certifications
         </h3>
         <p className="max-w-[900px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">

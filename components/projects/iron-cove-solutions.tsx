@@ -4,7 +4,6 @@ import { useEffect, useState } from "react";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
 import { PictureCarousel } from "../ui/picture-carousel";
-import { fetchSpotifyProjectBlogs } from "@/actions/fetchBillboardifyBlogs";
 import { IronCoveSolutionsBackground, IronCoveSolutionsBackground2 } from "./iron-cove-solutions-background";
 import Link from "next/link";
 
@@ -48,12 +47,12 @@ export const IronCoveSolutions = () => {
       },
     ],
     colors: {
-      buttonBg: "bg-pink-50",
-      buttonText: "text-pink-700",
-      buttonHoverBg: "hover:bg-pink-100",
-      dotActive: "bg-pink-400",
-      dotInactive: "bg-pink-300/70",
-      dotHover: "hover:bg-pink-400",
+      buttonBg: "bg-blue-50",
+      buttonText: "text-blue-700",
+      buttonHoverBg: "hover:bg-blue-100",
+      dotActive: "bg-blue-400",
+      dotInactive: "bg-blue-300/70",
+      dotHover: "hover:bg-blue-400",
     },
   };
 
@@ -97,7 +96,7 @@ export const IronCoveSolutions = () => {
   const carousel = activeTab === "after" ? after : before;
 
   return (
-    <div className="w-full h-full bg-white rounded-2xl overflow-hidden b-10 relative border-2 border-gray-100">
+    <div className="w-full h-full bg-white rounded-2xl overflow-hidden b-10 relative border-2 border-gray-100 shadow-lg transition-shadow hover:shadow-2xl">
       {/* Background Image */}
       <div className="absolute bottom-0 left-0 z-0 opacity-70 -translate-x-1/2 translate-y-1/2">
         <IronCoveSolutionsBackground />
@@ -125,7 +124,7 @@ export const IronCoveSolutions = () => {
                 ironcovesolutions.com
               </h2>
               <p className="text-xl text-gray-600 italic">
-                renovated and modernized company website
+                dynamic and modernized company website
               </p>
             </div>
           </div>
@@ -218,8 +217,8 @@ export const IronCoveSolutions = () => {
                 className={cn(
                   "px-6 py-2 rounded-md font-medium transition-all duration-200",
                   activeTab === "after"
-                    ? "bg-pink-100 text-pink-700 ring-2 ring-pink-400"
-                    : "text-gray-600 hover:bg-pink-50 hover:text-pink-700"
+                    ? "bg-blue-100 text-blue-700 ring-2 ring-blue-400"
+                    : "text-gray-600 hover:bg-blue-50 hover:text-blue-700"
                 )}
               >
                 after migration

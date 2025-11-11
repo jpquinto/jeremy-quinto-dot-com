@@ -5,6 +5,7 @@ import { Projects } from "@/components/projects";
 import { About } from "@/components/about";
 import { Contact } from "@/components/contact";
 import { BlogListing } from "@/components/blog-listing";
+import { Experience } from "@/components/experience";
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <SkipLinks />
       <Hero />
       <Skills />
+      <Experience />
       <Projects />
       <About />
       <BlogListing />

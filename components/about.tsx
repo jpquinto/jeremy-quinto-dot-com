@@ -3,13 +3,13 @@ import { Component } from "lucide-react";
 export const About = () => {
   return (
     <section
-      className="w-full py-12 md:py-24 lg:py-32 bg-white shadow-lg"
+      className="w-full py-12 md:py-24 lg:py-32 bg-gray-100 shadow-lg"
       id="about"
     >
       <div className="container space-y-6 px-4 md:px-6">
         <div className="flex flex-col items-center justify-center space-y-4 text-center">
           <div className="space-y-2">
-            <div className="inline-block text-purple-700 rounded-lg bg-gray-100 px-3 py-1">
+            <div className="inline-block text-lime-700 rounded-lg bg-white px-3 py-1">
               #bio
             </div>
             <h2 className="bg-gradient-to-b from-black/80 to-black/20 bg-clip-text text-transparent drop-shadow-2xl text-4xl tracking-tight sm:text-6xl pb-3">
@@ -25,8 +25,8 @@ export const About = () => {
           className="text-gray-500 h-4 w-4 mx-auto"
         />
         <div className="mx-auto grid items-start gap-4 sm:max-w-4xl sm:grid-cols-2 lg:max-w-5xl lg:grid-cols-3 text-justify">
-          <div className="h-full grid gap-1 hover:bg-slate-100 transition-all hover:shadow-md p-2 rounded-xl">
-            <p role="heading" className="-translate-x-3 text-7xl mb-5">
+          <div className="h-full grid gap-1 bg-white transition-all shadow-md hover:shadow-2xl p-4 rounded-xl">
+            <p role="heading" className="-translate-x-3 text-5xl mb-5">
               🎓
             </p>
             <h3 className="text-xl font-bold tracking-tight">education</h3>
@@ -35,8 +35,8 @@ export const About = () => {
               Mathematics - Computer Science and a minor in Data Science
             </p>
           </div>
-          <div className="h-full grid gap-1 hover:bg-slate-100 transition-all hover:shadow-md p-2 rounded-xl">
-            <p role="heading" className="-translate-x-3 text-7xl mb-5">
+          <div className="h-full grid gap-1 bg-white transition-all shadow-md hover:shadow-2xl p-4 rounded-xl">
+            <p role="heading" className="-translate-x-3 text-5xl mb-5">
               🌉
             </p>
             <h3 className="text-xl font-bold tracking-tight">bay area</h3>
@@ -45,8 +45,8 @@ export const About = () => {
               currently living. i have never lived outside California
             </p>
           </div>
-          <div className="h-full grid gap-1 hover:bg-slate-100 transition-all hover:shadow-md p-2 rounded-xl">
-            <p role="heading" className="-translate-x-3 text-7xl mb-5">
+          <div className="h-full grid gap-1 bg-white transition-all shadow-md hover:shadow-2xl p-4 rounded-xl">
+            <p role="heading" className="-translate-x-3 text-5xl mb-5">
               🏀
             </p>
             <h3 className="text-xl font-bold tracking-tight">hobbies</h3>

@@ -14,7 +14,7 @@ export const BlogCarouselItem = ({
     return (
         <Link
             href={post.url} 
-            className="grid p-4 bg-white rounded-lg shadow-lg group hover:-translate-y-1 transition-transform duration-500"
+            className="grid p-4 bg-gray-100/50 rounded-lg shadow-lg group hover:-translate-y-1 transition-transform duration-500"
             target="_blank"
         >
             <div className="overflow-hidden w-full h-48 rounded-lg relative">
@@ -30,7 +30,7 @@ export const BlogCarouselItem = ({
             </div>
             <Link
                 href={post.url}
-                className="mt-4 text-sm text-blue-500 group-hover:underline ml-auto"
+                className="mt-4 text-sm text-lime-700 group-hover:underline ml-auto"
                 aria-label="read more (opens in new tab)"
             >
                 read →

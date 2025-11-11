@@ -100,9 +100,9 @@ export const Billboardify = () => {
   const carousel = activeTab === "images" ? overview : architecture;
 
   return (
-    <div className="w-full h-full bg-white rounded-2xl overflow-hidden b-10 relative border-2 border-gray-100">
+    <div className="w-full h-full bg-white rounded-2xl overflow-hidden b-10 relative border-2 border-gray-100 shadow-lg transition-shadow hover:shadow-2xl">
       {/* Background Waves */}
-      <div className="absolute bottom-0 left-0 w-full h-[250px] z-0 opacity-70">
+      <div className="absolute bottom-0 left-0 w-full h-[150px] z-0 opacity-70">
         <Image
           src="/img/projects/billboardify/background-waves.png"
           alt="Waves Bottom"
@@ -232,7 +232,7 @@ export const Billboardify = () => {
 
           {/* Tab Content */}
           <div className="flex-1 flex items-center justify-center">
-            {(activeTab === "images" || activeTab === "architecture") ? (
+            {activeTab === "images" || activeTab === "architecture" ? (
               <div className="w-full flex items-center justify-center pb-8">
                 <PictureCarousel
                   images={carousel.images}
