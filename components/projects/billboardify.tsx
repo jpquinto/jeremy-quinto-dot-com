@@ -26,7 +26,7 @@ export const Billboardify = () => {
             src: "/img/projects/billboardify/song-page-2.png",
             alt: "Billboardify Screenshot 1",
             caption:
-            "listening history and analytics for individual songs, artists, and albums",
+            "custom pages with listening history and analytics for individual songs, artists, and albums",
         },
         {
             src: "/img/projects/billboardify/songs-chart-2.png",

@@ -3,6 +3,8 @@
 import { Surfbored } from "./projects/surfbored";
 import { Billboardify } from "./projects/billboardify";
 import { IronCoveSolutions } from "./projects/iron-cove-solutions";
+import { Sonanyms } from "./projects/sonanyms";
+import { AWSQuizGame } from "./projects/aws-quiz-game";
 
 export const Projects = () => {
   return (
@@ -30,6 +32,10 @@ export const Projects = () => {
           <Surfbored />
           <Billboardify />
           <IronCoveSolutions />
+          <div className="grid grid-cols-1 md:grid-cols-2 md:gap-x-10">
+            <Sonanyms />
+            <AWSQuizGame />
+          </div>
         </div>
       </div>
     </section>
