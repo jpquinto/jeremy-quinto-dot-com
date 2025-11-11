@@ -121,7 +121,7 @@ export const Billboardify = () => {
         />
       </div>
       {/* Content */}
-      <div className="grid md:grid-cols-2 gap-8 p-8 relative z-10">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 p-8 relative z-10">
         {/* Left Column - Project Info */}
         <div className="flex flex-col justify-center space-y-6">
           {/* Title */}
@@ -201,7 +201,7 @@ export const Billboardify = () => {
               <button
                 onClick={() => setActiveTab("images")}
                 className={cn(
-                  "px-6 py-2 rounded-md font-medium transition-all duration-200",
+                  "px-2 md:px-6 py-1 md:py-2 rounded-md font-medium transition-all duration-200",
                   activeTab === "images"
                     ? "bg-purple-100 text-purple-700 ring-2 ring-purple-400"
                     : "text-gray-600 hover:bg-purple-50 hover:text-purple-700"
@@ -212,7 +212,7 @@ export const Billboardify = () => {
               <button
                 onClick={() => setActiveTab("architecture")}
                 className={cn(
-                  "px-6 py-2 rounded-md font-medium transition-all duration-200",
+                  "px-2 md:px-6 py-1 md:py-2 rounded-md font-medium transition-all duration-200",
                   activeTab === "architecture"
                     ? "bg-pink-100 text-pink-400 ring-2 ring-pink-200"
                     : "text-gray-600 hover:bg-pink-50 hover:text-pink-400"
@@ -223,7 +223,7 @@ export const Billboardify = () => {
               <button
                 onClick={() => setActiveTab("blog")}
                 className={cn(
-                  "px-6 py-2 rounded-md font-medium transition-all duration-200",
+                  "px-2 md:px-6 py-1 md:py-2 rounded-md font-medium transition-all duration-200",
                   activeTab === "blog"
                     ? "bg-amber-100 text-amber-700 ring-2 ring-amber-400"
                     : "text-gray-600 hover:bg-amber-50 hover:text-amber-700"

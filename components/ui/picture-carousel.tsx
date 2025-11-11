@@ -93,7 +93,7 @@ export const PictureCarousel = ({ images, colors }: PictureCarouselProps) => {
 
   return (
     <div className="w-full h-full flex flex-col items-center justify-center">
-      <div className="relative w-full h-[575px] max-w-3xl">
+      <div className="relative w-full h-[400px] md:h-[575px] max-w-3xl">
         {imageStack.map((image, index) => (
           <motion.div
             key={image.src + image.originalIndex}

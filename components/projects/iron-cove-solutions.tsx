@@ -110,11 +110,11 @@ export const IronCoveSolutions = () => {
         <IronCoveSolutionsBackground2 />
       </div>
       {/* Content */}
-      <div className="grid md:grid-cols-2 gap-8 p-8 relative z-10">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 p-8 relative z-10">
         {/* Left Column - Project Info */}
         <div className="flex flex-col justify-center space-y-6">
           {/* Title */}
-          <div className="flex items-center gap-4">
+          <div className="flex flex-col md:flex-row items-center gap-4">
             <div className="flex-shrink-0">
               <Image
                 src="/img/projects/ironcovesolutions/logo.png"

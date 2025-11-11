@@ -98,7 +98,7 @@ export const Experience = () => {
         {/* Timeline */}
         <div className="max-w-5xl mx-auto mt-12">
           {experiences.map((exp, index) => (
-            <div key={index} className="relative flex gap-8 pb-12 last:pb-0">
+            <div key={index} className="relative flex gap-4 md:gap-8 pb-12 last:pb-0">
               {/* Timeline Line */}
               <div className="flex flex-col items-center">
                 <div className="w-4 h-4 rounded-full bg-lime-400 border-4 border-white shadow-md z-10" />
