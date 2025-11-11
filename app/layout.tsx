@@ -20,11 +20,20 @@ export const metadata: Metadata = {
     url: 'https://jeremyquinto.com',
     title: title,
     description: description,
+    images: [
+      {
+        url: '/img/cover-image.png',
+        width: 1831,
+        height: 1217,
+        alt: 'Jeremy Quinto',
+      }
+    ]
   },
   twitter: {
     card: 'summary_large_image',
     title: title,
     description: description,
+    images: ['/img/cover-image.png'],
   },
   category: 'technology',
   authors: [{ name: 'Jeremy Quinto' }],
