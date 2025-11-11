@@ -17,40 +17,40 @@ export const metadata: Metadata = {
   title: title,
   description: description,
   openGraph: {
-    url: 'https://jeremyquinto.com',
+    url: "https://jeremyquinto.com",
     title: title,
     description: description,
     images: [
       {
-        url: '/img/cover-image.png',
+        url: "https://jeremyquinto.com/img/cover-image.png",
         width: 1831,
         height: 1217,
-        alt: 'Jeremy Quinto',
-      }
-    ]
+        alt: "Jeremy Quinto",
+      },
+    ],
   },
   twitter: {
-    card: 'summary_large_image',
+    card: "summary_large_image",
     title: title,
     description: description,
-    images: ['/img/cover-image.png'],
+    images: ["https://jeremyquinto.com/img/cover-image.png"],
   },
-  category: 'technology',
-  authors: [{ name: 'Jeremy Quinto' }],
+  category: "technology",
+  authors: [{ name: "Jeremy Quinto" }],
   other: {
-    copyright: 'Jeremy Quinto',
-    'design-by': 'Jeremy Quinto',
-    'revisit-after': '7 days',
-    distribution: 'California',
-    rating: 'general',
-    language: 'EN',
-    city: 'Danville',
-    country: 'United States',
-    zipcode: '94506',
-    'geo.placename': 'Danville, California, United States',
-    'geo.region': 'US-CA',
+    copyright: "Jeremy Quinto",
+    "design-by": "Jeremy Quinto",
+    "revisit-after": "7 days",
+    distribution: "California",
+    rating: "general",
+    language: "EN",
+    city: "Danville",
+    country: "United States",
+    zipcode: "94506",
+    "geo.placename": "Danville, California, United States",
+    "geo.region": "US-CA",
     subject: description,
-  }
+  },
 };
 
 export default function RootLayout({
