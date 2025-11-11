@@ -6,6 +6,7 @@ import { IronCoveSolutions } from "./projects/iron-cove-solutions";
 import { Sonanyms } from "./projects/sonanyms";
 import { AWSQuizGame } from "./projects/aws-quiz-game";
 import { Component } from "lucide-react";
+import { PortfolioProject } from "./projects/portfolio";
 
 export const Projects = () => {
   return (
@@ -41,6 +42,7 @@ export const Projects = () => {
               <Sonanyms />
               <AWSQuizGame />
             </div>
+            <PortfolioProject />
           </div>
         </div>
       </section>
