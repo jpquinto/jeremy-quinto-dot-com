@@ -1,3 +1,4 @@
+import { markdownToHtml } from "@/lib/markdown-to-html";
 import { Component } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
@@ -11,9 +12,9 @@ export const Experience = () => {
       website: "https://www.surfbored.app/",
       period: "Aug 2025 - Present",
       description: [
-        "collaborated with the founder to design and implement the core backend API utilizing Deno and TypeScript, focusing on high development velocity and robust code structure",
-        "served as the sole Solutions Architect, designing the entire application and network architecture with a primary focus on maximizing cost savings and capital efficiency on a pre-seed startup budget",
-        "designed and deployed critical ingestion data jobs using AWS EventBridge and Lambda to process and normalize real-time data feeds from multiple external APIs (e.g., Ticketmaster, Yelp, Weather API)",
+        "collaborated with the founder to design and implement the **core backend API utilizing Deno and TypeScript**, focusing on high development velocity and robust code structure",
+        "served as the sole **Solutions Architect**, designing the entire application and network architecture with a primary focus on maximizing **cost savings and capital efficiency** on a pre-seed startup budget",
+        "designed and deployed **critical data ingestion jobs** using AWS EventBridge and Lambda to process and normalize real-time data feeds from multiple external APIs (e.g., Ticketmaster, Yelp, Weather API)",
       ],
       tags: [
         "AWS",
@@ -33,10 +34,10 @@ export const Experience = () => {
       website: "https://www.corkvision.com/",
       period: "May 2025 - Present",
       description: [
-        "single-handedly drove core AI chatbot performance by leading the design and implementation of a Text-to-SQL RAG (Retrieval-Augmented Generation) system, improving agent generation quality in key LLM metrics: ROUGE-N increased by 27% and BERTScore by 45%",
-        "acted as the primary Solutions Architect, guiding technical decisions that resulted in major infrastructure cost savings (approx. 25% reduction) across multiple service deployments by optimizing resource provisioning",
-        "managed and maintained the complete application infrastructure and networking deployment, leveraging Infrastructure-as-Code (IaC) with Terraform across complex, multi-account AWS environments",
-        "developed and deployed core backend Express.js API containerized on AWS ECS, implementing 80+ endpoints backed by 1000s unit and integration tests to ensure stability, and OpenAPI YAML documentation for long-term maintainability",
+        "single-handedly drove core AI chatbot performance by leading the design and implementation of a **Text-to-SQL RAG (Retrieval-Augmented Generation) system**, improving agent generation quality in key LLM metrics: **ROUGE-N increased by 27% and BERTScore by 45%**",
+        "acted as the primary **Solutions Architect**, guiding technical decisions that resulted in **major infrastructure cost savings** (approx. 25% reduction) across multiple service deployments by optimizing resource provisioning",
+        "managed and maintained the **complete application infrastructure and networking deployment**, leveraging Infrastructure-as-Code (IaC) with Terraform across complex, multi-account AWS environments",
+        "developed and deployed core backend Express.js API containerized on AWS ECS, **implementing 80+ endpoints** backed by 1000s unit and integration tests to ensure stability, and OpenAPI YAML documentation for long-term maintainability",
       ],
       tags: [
         "AWS",
@@ -56,9 +57,9 @@ export const Experience = () => {
       website: "https://ironcovesolutions.com/",
       period: "Mar 2024 - June 2025",
       description: [
-        "led the development and deployment of a modern, fully responsive company website makeover (Next.js, Vercel, Tailwind), which drove core business metrics: +100% increase in overall traffic and a 12% uplift in organic leads",
+        "led the development and deployment of a modern, fully responsive company website makeover (Next.js, Vercel, Tailwind), which drove core business metrics: **+100% increase in overall traffic and a 12% uplift in organic leads**",
         "designed, built, and maintained a full-stack custom HR orchestration application leveraging AWS serverless services, WebSocket APIs, and Next.js to automate user lifecycle management and license provisioning with Okta workflows",
-        "served as a technical cloud consultant, leading client-facing meetings to define and scope complex cloud platform integrations with non-technical stakeholders, and collaborating with client engineering teams to deliver solutions",
+        "served as a **technical cloud consultant**, leading client-facing meetings to define and scope complex cloud platform integrations with non-technical stakeholders, and collaborating with client engineering teams to deliver solutions",
       ],
       tags: [
         "Next.js",
@@ -158,7 +159,9 @@ export const Experience = () => {
                       className="text-gray-600 text-sm flex items-start gap-2"
                     >
                       <span className="text-lime-400">•</span>
-                      <span>{item}</span>
+                      <span dangerouslySetInnerHTML={{
+                        __html: markdownToHtml(item)
+                      }}></span>
                     </li>
                   ))}
                 </ul>

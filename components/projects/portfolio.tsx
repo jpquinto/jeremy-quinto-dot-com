@@ -56,6 +56,9 @@ export const PortfolioProject = () => {
               TypeScript
             </span>
             <span className="px-3 py-1 bg-lime-100 text-lime-700 rounded-full text-sm font-medium">
+              Tailwind
+            </span>
+            <span className="px-3 py-1 bg-lime-100 text-lime-700 rounded-full text-sm font-medium">
               AWS
             </span>
           </div>

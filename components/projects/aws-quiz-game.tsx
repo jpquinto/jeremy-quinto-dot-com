@@ -2,8 +2,16 @@
 
 import Image from "next/image";
 import { GitHubLink } from "../ui/github-link";
+import { markdownToHtml } from "@/lib/markdown-to-html";
 
 export const AWSQuizGame = () => {
+
+  const description1 =
+    "a basic **aws quiz game** built with next.js and aws to test your knowledge on over **100+ aws services**, from basic to some of the more obscure options. players can choose quizzes based on guessing the service based on a description or the icon (just for fun). the game features a serverless architecture using aws lambda functions and DynamoDB.";
+
+  const description2 =
+    "the idea for the game came as i was studying for the aws certifications. i created the quiz data by scraping the AWS documentation for service names, descriptions, and icons, and storing them in a DynamoDB table. the frontend is built with next.js and communicates with the backend using API Gateway endpoints that trigger lambda functions to fetch quiz questions and validate the answers. coming soon!";
+
   return (
     <div className="w-full h-full bg-white rounded-2xl overflow-hidden b-10 relative border-2 border-gray-100 shadow-lg transition-shadow hover:shadow-2xl">
       {/* Background Image */}
@@ -33,22 +41,18 @@ export const AWSQuizGame = () => {
 
         {/* Description */}
         <div className="space-y-4">
-          <p className="text-gray-500 dark:text-gray-400 leading-relaxed">
-            a basic aws quiz game built with next.js and aws to test your
-            knowledge on over 100+ aws services, from basic to some of the more
-            obscure options. players can choose quizzes based on guessing the
-            service based on a description or the icon (just for fun). the game
-            features a serverless architecture using aws lambda functions and
-            DynamoDB.
-          </p>
-          <p className="text-gray-500 dark:text-gray-400 leading-relaxed">
-            the idea for the game came as i was studying for the aws
-            certifications. i created the quiz data by scraping the AWS
-            documentation for service names, descriptions, and icons, and
-            storing them in a DynamoDB table. the frontend is built with next.js
-            and communicates with the backend using API Gateway endpoints that
-            trigger lambda functions to fetch quiz questions and validate the
-            answers. coming soon!
+          <p
+            className="text-gray-500 dark:text-gray-400 leading-relaxed"
+            dangerouslySetInnerHTML={{
+              __html: markdownToHtml(description1),
+            }}
+          ></p>
+          <p
+            className="text-gray-500 dark:text-gray-400 leading-relaxed"
+            dangerouslySetInnerHTML={{
+              __html: markdownToHtml(description2),
+            }}
+          >
           </p>
         </div>
 

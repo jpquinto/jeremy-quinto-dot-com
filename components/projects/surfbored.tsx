@@ -4,9 +4,17 @@ import Link from "next/link";
 import { useState } from "react";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
+import { markdownToHtml } from "@/lib/markdown-to-html";
 
 export const Surfbored = () => {
   const [activeTab, setActiveTab] = useState<"features" | "demo">("features");
+
+  const description1 = "surfbored is the only social app designed to get you **off your phone** and into real experiences with the people you care about.";
+  const description2 = `we succeed when you close the app and go do something memorable.
+              create shared boards to plan outings with others, get intelligent
+              suggestions from AI that learns from your completed activities,
+              and archive your favorite moments in a private scrapbook. **Beta coming
+              soon, join the early access waitlist!**`;
 
   return (
     <div className="w-full h-full bg-white rounded-2xl overflow-hidden b-10 relative border-2 border-gray-100 shadow-lg transition-shadow hover:shadow-2xl">
@@ -75,16 +83,18 @@ export const Surfbored = () => {
 
           {/* Description */}
           <div className="space-y-4">
-            <p className="text-gray-500 dark:text-gray-400 leading-relaxed">
-              surfbored is the only social app designed to get you off your
-              phone and into real experiences with the people you care about.
-            </p>
-            <p className="text-gray-500 dark:text-gray-400 leading-relaxed">
-              we succeed when you close the app and go do something memorable.
-              create shared boards to plan outings with others, get intelligent
-              suggestions from AI that learns from your completed activities,
-              and archive your favorite moments in a private scrapbook. Coming
-              soon!
+            <p
+              className="text-gray-500 dark:text-gray-400 leading-relaxed"
+              dangerouslySetInnerHTML={{
+                __html: markdownToHtml(description1),
+              }}
+            ></p>
+            <p
+              className="text-gray-500 dark:text-gray-400 leading-relaxed"
+              dangerouslySetInnerHTML={{
+                __html: markdownToHtml(description2),
+              }}
+            >
             </p>
           </div>
 

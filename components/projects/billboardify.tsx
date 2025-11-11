@@ -8,6 +8,7 @@ import { BillboardifyBlogPosts } from "./billboardify-blog-posts";
 import { fetchSpotifyProjectBlogs } from "@/actions/fetchBillboardifyBlogs";
 import Link from "next/link";
 import { GitHubLink } from "../ui/github-link";
+import { markdownToHtml } from "@/lib/markdown-to-html";
 
 export const Billboardify = () => {
   const [activeTab, setActiveTab] = useState<"images" | "architecture" | "blog">("images");
@@ -101,6 +102,10 @@ export const Billboardify = () => {
 
   const carousel = activeTab === "images" ? overview : architecture;
 
+  const description1 = "billboardify transforms your Spotify listening history into **personalized Billboard-style charts**, generating weekly rankings for your top songs, artists, and albums. the platform features an AI-powered chatbot that lets you explore your music data through natural language queries, control Spotify playback, and automatically generate custom playlists based on your listening patterns and preferences.";
+
+  const description2 = "built on a robust AWS infrastructure, i created an **automated ETL pipeline** with Lambda functions, EventBridge, and RDS to continuously ingest and aggregate listening data. The system combines **LangGraph and Text-to-SQL RAG** with vector databases to power intelligent conversational interactions, all wrapped in a sleek Next.js frontend with infrastructure managed through Terraform and GitHub Actions.";
+
   return (
     <div className="w-full h-full bg-white rounded-2xl overflow-hidden b-10 relative border-2 border-gray-100 shadow-lg transition-shadow hover:shadow-2xl">
       {/* Background Waves */}
@@ -144,23 +149,18 @@ export const Billboardify = () => {
 
           {/* Description */}
           <div className="space-y-4">
-            <p className="text-gray-500 dark:text-gray-400 leading-relaxed">
-              billboardify transforms your Spotify listening history into
-              personalized Billboard-style charts, generating weekly rankings
-              for your top songs, artists, and albums. the platform features an
-              AI-powered chatbot that lets you explore your music data through
-              natural language queries, control Spotify playback, and
-              automatically generate custom playlists based on your listening
-              patterns and preferences.
-            </p>
-            <p className="text-gray-500 dark:text-gray-400 leading-relaxed">
-              built on a robust AWS infrastructure, i created an automated ETL
-              pipeline with Lambda functions, EventBridge, and RDS to
-              continuously ingest and aggregate listening data. The system
-              combines LangGraph and Text-to-SQL RAG with vector databases to
-              power intelligent conversational interactions, all wrapped in a
-              sleek Next.js frontend with infrastructure managed through
-              Terraform and GitHub Actions.
+            <p
+              className="text-gray-500 dark:text-gray-400 leading-relaxed"
+              dangerouslySetInnerHTML={{
+                __html: markdownToHtml(description1),
+              }}
+            ></p>
+            <p
+              className="text-gray-500 dark:text-gray-400 leading-relaxed"
+              dangerouslySetInnerHTML={{
+                __html: markdownToHtml(description2),
+              }}
+            >
             </p>
           </div>
 
