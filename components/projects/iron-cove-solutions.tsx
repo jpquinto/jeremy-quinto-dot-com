@@ -158,17 +158,17 @@ export const IronCoveSolutions = () => {
           <div className="space-y-4">
             <p className="text-gray-500 dark:text-gray-400 leading-relaxed">
               as the lead developer for iron cove solutions, i spearheaded a
-              complete renovation and modernization of the company's website to
-              better reflect its brand and services. the website features a
+              complete renovation and modernization of the company{`'`}s website
+              to better reflect its brand and services. the website features a
               clean, responsive design built with next.js and tailwindcss,
               ensuring optimal performance across all devices.
             </p>
             <p className="text-gray-500 dark:text-gray-400 leading-relaxed">
               with over 600 pages of dynamic content sourced from contentful cms
               and accessed through a GraphQL API, the website provides
-              comprehensive information about the company's offerings. i
-              implemented many different SEO tactics to improve the website's
-              visibility on search engines, resulting in greatly increased
+              comprehensive information about the company{`'`}s offerings. i
+              implemented many different SEO tactics to improve the website{`'`}
+              s visibility on search engines, resulting in greatly increased
               traffic and engagement. the site also includes a blog section
               where the company regularly publishes articles related to its
               industry, further establishing its authority and expertise, and is
