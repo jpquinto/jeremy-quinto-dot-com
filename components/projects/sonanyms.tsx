@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import { GitHubLink } from "../ui/github-link";
 
 export const Sonanyms = () => {
   return (
@@ -20,6 +21,8 @@ export const Sonanyms = () => {
             </p>
           </div>
         </div>
+
+        <GitHubLink url={"https://github.com/jpquinto/sonanyms"} />
 
         {/* Description */}
         <div className="space-y-4">

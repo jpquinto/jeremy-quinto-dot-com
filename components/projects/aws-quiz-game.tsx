@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import { GitHubLink } from "../ui/github-link";
 
 export const AWSQuizGame = () => {
   return (
@@ -27,6 +28,8 @@ export const AWSQuizGame = () => {
             <p className="text-xl text-gray-600 italic">basic aws quiz game</p>
           </div>
         </div>
+
+        <GitHubLink url={"https://github.com/jpquinto/simple-quiz-service"} />
 
         {/* Description */}
         <div className="space-y-4">

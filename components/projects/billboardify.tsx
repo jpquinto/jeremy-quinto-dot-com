@@ -6,6 +6,8 @@ import Image from "next/image";
 import { PictureCarousel } from "../ui/picture-carousel";
 import { BillboardifyBlogPosts } from "./billboardify-blog-posts";
 import { fetchSpotifyProjectBlogs } from "@/actions/fetchBillboardifyBlogs";
+import Link from "next/link";
+import { GitHubLink } from "../ui/github-link";
 
 export const Billboardify = () => {
   const [activeTab, setActiveTab] = useState<"images" | "architecture" | "blog">("images");
@@ -137,6 +139,8 @@ export const Billboardify = () => {
               </p>
             </div>
           </div>
+
+          <GitHubLink url={"https://github.com/jpquinto/billboardify"} />
 
           {/* Description */}
           <div className="space-y-4">
