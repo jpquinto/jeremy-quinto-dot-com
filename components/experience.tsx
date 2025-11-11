@@ -2,6 +2,7 @@ import { markdownToHtml } from "@/lib/markdown-to-html";
 import { Component } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import { HexGrid } from "./hex-grid";
 
 export const Experience = () => {
   const experiences = [
@@ -74,10 +75,14 @@ export const Experience = () => {
 
   return (
     <section
-      className="w-full py-12 md:py-24 lg:py-32 bg-gray-100 shadow-lg"
+      className="w-full py-12 md:py-24 lg:py-32 bg-gray-100 shadow-lg relative"
       id="experience"
     >
-      <div className="container space-y-6 px-4 md:px-6">
+      {/* Background Hex Grid */}
+      <div className="z-0 absolute top-0 left-0 w-full flex justify-center">
+        <HexGrid />
+      </div>
+      <div className="container space-y-6 px-4 md:px-6 relative z-10">
         <div className="flex flex-col items-center justify-center space-y-4 text-center">
           <div className="space-y-2">
             <div className="inline-block text-lime-700 rounded-lg bg-lime-100 px-3 py-1">
@@ -95,91 +100,96 @@ export const Experience = () => {
           role="presentation"
           className="text-gray-500 h-4 w-4 mx-auto"
         />
-        {/* Timeline */}
-        <div className="max-w-5xl mx-auto mt-12">
-          {experiences.map((exp, index) => (
-            <div key={index} className="relative flex gap-4 md:gap-8 pb-12 last:pb-0">
-              {/* Timeline Line */}
-              <div className="flex flex-col items-center">
-                <div className="w-4 h-4 rounded-full bg-lime-400 border-4 border-white shadow-md z-10" />
-                {index !== experiences.length - 1 && (
-                  <div className="w-0.5 h-full bg-lime-400 mt-2" />
-                )}
-              </div>
-
-              {/* Content */}
-              <div className="flex-1 bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition-all border border-gray-200 hover:scale-[1.01]">
-                <div>
-                  <Image
-                    src={exp.logo}
-                    alt={`${exp.company} logo`}
-                    width={60}
-                    height={60}
-                    className="mb-4 aspect-square object-contain rounded-lg"
-                  />
+          {/* Timeline */}
+          <div className="max-w-5xl mx-auto mt-12 relative z-10 opacity-70">
+            {experiences.map((exp, index) => (
+              <div
+                key={index}
+                className="relative flex gap-4 md:gap-8 pb-12 last:pb-0"
+              >
+                {/* Timeline Line */}
+                <div className="flex flex-col items-center">
+                  <div className="w-4 h-4 rounded-full bg-lime-400 border-4 border-white shadow-md z-10" />
+                  {index !== experiences.length - 1 && (
+                    <div className="w-0.5 h-full bg-lime-400 mt-2" />
+                  )}
                 </div>
-                <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-3 mb-3">
-                  <div className="space-y-3">
-                    <h3 className="text-xl font-bold text-gray-800 tracking-tighter">
-                      {exp.title}
-                    </h3>
-                    <div>
-                      <Link
-                        href={exp.website}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex md:text-lg tracking-tighter items-center gap-2 text-lime-700 hover:text-lime-500 font-medium transition-colors"
-                      >
-                        <span>{exp.company}</span>
-                        <svg
-                          className="w-4 h-4"
-                          fill="none"
-                          stroke="currentColor"
-                          viewBox="0 0 24 24"
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth={2}
-                            d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
-                          />
-                        </svg>
-                      </Link>
-                    </div>
+
+                {/* Content */}
+                <div className="flex-1 bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition-all border border-gray-200 hover:scale-[1.01]">
+                  <div>
+                    <Image
+                      src={exp.logo}
+                      alt={`${exp.company} logo`}
+                      width={60}
+                      height={60}
+                      className="mb-4 aspect-square object-contain rounded-lg"
+                    />
                   </div>
-                  <span className="text-sm text-gray-500 font-medium whitespace-nowrap">
-                    {exp.period}
-                  </span>
-                </div>
-
-                <ul className="space-y-2 mb-4">
-                  {exp.description.map((item, i) => (
-                    <li
-                      key={i}
-                      className="text-gray-600 text-sm flex items-start gap-2"
-                    >
-                      <span className="text-lime-400">•</span>
-                      <span dangerouslySetInnerHTML={{
-                        __html: markdownToHtml(item)
-                      }}></span>
-                    </li>
-                  ))}
-                </ul>
-
-                <div className="flex flex-wrap gap-2">
-                  {exp.tags.map((tag, i) => (
-                    <span
-                      key={i}
-                      className="px-3 py-1 bg-lime-50 text-lime-700 rounded-full text-xs font-medium"
-                    >
-                      {tag}
+                  <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-3 mb-3">
+                    <div className="space-y-3">
+                      <h3 className="text-xl font-bold text-gray-800 tracking-tighter">
+                        {exp.title}
+                      </h3>
+                      <div>
+                        <Link
+                          href={exp.website}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex md:text-lg tracking-tighter items-center gap-2 text-lime-700 hover:text-lime-500 font-medium transition-colors"
+                        >
+                          <span>{exp.company}</span>
+                          <svg
+                            className="w-4 h-4"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                          >
+                            <path
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              strokeWidth={2}
+                              d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                            />
+                          </svg>
+                        </Link>
+                      </div>
+                    </div>
+                    <span className="text-sm text-gray-500 font-medium whitespace-nowrap">
+                      {exp.period}
                     </span>
-                  ))}
+                  </div>
+
+                  <ul className="space-y-2 mb-4">
+                    {exp.description.map((item, i) => (
+                      <li
+                        key={i}
+                        className="text-gray-600 text-sm flex items-start gap-2"
+                      >
+                        <span className="text-lime-400">•</span>
+                        <span
+                          dangerouslySetInnerHTML={{
+                            __html: markdownToHtml(item),
+                          }}
+                        ></span>
+                      </li>
+                    ))}
+                  </ul>
+
+                  <div className="flex flex-wrap gap-2">
+                    {exp.tags.map((tag, i) => (
+                      <span
+                        key={i}
+                        className="px-3 py-1 bg-lime-50 text-lime-700 rounded-full text-xs font-medium"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
-        </div>
+            ))}
+          </div>
       </div>
     </section>
   );
